@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>EstateAgency Bootstrap Template</title>
@@ -133,77 +132,73 @@
 
   <!--/ Nav Star /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-    <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About Us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Property
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="property-single.php">Property Single</a>
-              <a class="dropdown-item" href="blog-single.php">Blog Single</a>
-              <a class="dropdown-item" href="agents-grid.php">Agents Grid</a>
-              <a class="dropdown-item" href="agent-single.php">Agent Single</a>
-            </div>
-          </li>
+      <div class="container">
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+                  aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
+          <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+                  data-target="#navbarTogglerDemo01" aria-expanded="false">
+              <span class="fa fa-search" aria-hidden="true"></span>
+          </button>
+          <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.php">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="about.php">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false">
+                          Property
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="property-single.php">Property Single</a>
+                          <a class="dropdown-item" href="blog-single.php">Blog Single</a>
+                          <a class="dropdown-item" href="agents-grid.php">Agents Grid</a>
+                          <a class="dropdown-item" href="agent-single.php">Agent Single</a>
+                      </div>
+                  </li>
 
-          <!--          <li class="nav-item">-->
-          <!--            <a class="nav-link" href="blog-grid.html">Blog</a>-->
-          <!--          </li>-->
-          <li class="nav-item">
-            <a class="nav-link" href="Login.php">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-          </li>
-        </ul>
+                  <!--          <li class="nav-item">-->
+                  <!--            <a class="nav-link" href="blog-grid.html">Blog</a>-->
+                  <!--          </li>-->
+                  <li class="nav-item">
+                      <a class="nav-link" href="Login.php">Login</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contact.php">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+                  data-target="#navbarTogglerDemo01" aria-expanded="false">
+              <span class="fa fa-search" aria-hidden="true"></span>
+          </button>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
-    </div>
   </nav>
   <!--/ Nav End /-->
 
   <!--/ Intro Single star /-->
   <section class="intro-single">
-    <?php
-require_once 'Connection.php';
-$sql = "SELECT * FROM agent";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while ($data = mysqli_fetch_array($result)) {
-?>
+      <?php
+      require_once 'Connection.php';
+      $sql = "SELECT * FROM agent";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+      while ($data = mysqli_fetch_array($result)) {
+      ?>
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">
-              <?php echo $data['Name']; ?>
-            </h1>
-            <span class="color-text-a">Since
-              <?php echo $data['Rdate']; ?>
-            </span>
+            <h1 class="title-single"><?php echo $data['Name']; ?></h1>
+            <span class="color-text-a">Since <?php echo $data['Rdate']; ?></span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -211,10 +206,10 @@ if ($result->num_rows > 0) {
         </div>
       </div>
     </div>
-    <?php
-  }
-}
-?>
+          <?php
+      }
+      }
+      ?>
   </section>
   <!--/ Intro Single End /-->
 
@@ -224,13 +219,13 @@ if ($result->num_rows > 0) {
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <?php
-require_once 'Connection.php';
-$sql = "SELECT * FROM agent";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while ($data = mysqli_fetch_array($result)) {
-?>
+            <?php
+            require_once 'Connection.php';
+            $sql = "SELECT * FROM agent";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($data = mysqli_fetch_array($result)) {
+                    ?>
           <div class="row">
             <div class="col-md-6">
               <div class="agent-avatar-box">
@@ -241,33 +236,25 @@ if ($result->num_rows > 0) {
               <div class="agent-info-box">
                 <div class="agent-title">
                   <div class="title-box-d">
-                    <h3 class="title-d">About
-                      <?php echo $data['Name']; ?>
-                    </h3>
+                    <h3 class="title-d">About <?php echo $data['Name']; ?></h3>
                   </div>
                 </div>
                 <div class="agent-content mb-3">
                   <p class="content-d color-text-a" align="justify">
-                    <?php echo $data['Detail']; ?>
+                      <?php echo $data['Detail']; ?>
                   </p>
                   <div class="info-agents color-a">
                     <p>
                       <strong>Phone: </strong>
-                      <span class="color-text-a">
-                        <?php echo $data['Phone']; ?>
-                      </span>
+                      <span class="color-text-a"> <?php echo $data['Phone']; ?></span>
                     </p>
-                    <p>
-                      <strong>Address: </strong>
-                      <span class="color-text-a">
-                        <?php echo $data['Address']; ?>
-                      </span>
-                    </p>
+                      <p>
+                          <strong>Address: </strong>
+                          <span class="color-text-a"> <?php echo $data['Address']; ?></span>
+                      </p>
                     <p>
                       <strong>Email: </strong>
-                      <span class="color-text-a">
-                        <?php echo $data['Email']; ?>
-                      </span>
+                      <span class="color-text-a"> <?php echo $data['Email']; ?></span>
                     </p>
 
 
@@ -277,10 +264,10 @@ if ($result->num_rows > 0) {
               </div>
             </div>
           </div>
-          <?php
-  }
-}
-?>
+            <?php
+            }
+            }
+            ?>
         </div>
         <div class="col-md-12 section-t8">
           <div class="title-box-d">
@@ -606,11 +593,9 @@ if ($result->num_rows > 0) {
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com
-                </li>
+                  <span class="color-text-a">Phone .</span> contact@example.com</li>
                 <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234
-                </li>
+                  <span class="color-text-a">Email .</span> +54 356 945234</li>
               </ul>
             </div>
           </div>
@@ -769,5 +754,4 @@ if ($result->num_rows > 0) {
   <script src="js/main.js"></script>
 
 </body>
-
 </html>
