@@ -53,11 +53,11 @@
       <div class="row">
 
         <div class="col">
-          <button type="submit" class="btn btn-b w-100 btn1">Login</button>
+            <button type="submit" class="btn btn-b w-100 btn1">Login</button>
           </a>
         </div>
         <div class="col">
-          <button type="submit" class="btn btn-b w-100 btn2">SignUp</button>
+            <button type="submit" class="btn btn-b w-100 btn2">SignUp</button>
           </a>
         </div>
 
@@ -165,7 +165,7 @@
       </div>
 
 
-
+     
 
 
 
@@ -228,6 +228,7 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
+
                     <h1 class="intro-title mb-4">
                       <span class="color-b">Sell </span> Your
                       <br> Properties
@@ -587,13 +588,13 @@
       <div class="row">
         <div class="col-md-4">
           <?php
-require_once 'Connection.php';
+            require_once 'Connection.php';
 
-$sql = "SELECT * FROM agent";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while ($data = mysqli_fetch_array($result)) {
-?>
+            $sql = "SELECT * FROM agent";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+            while ($data = mysqli_fetch_array($result)) {
+            ?>
 
           <div class="card-box-d">
             <div class="card-img-d">
@@ -632,11 +633,11 @@ if ($result->num_rows > 0) {
           </div>
           <?php
 
-  }
+            }
 
-}
+            }
 
-?>
+            ?>
         </div>
 
       </div>
@@ -987,35 +988,35 @@ if ($result->num_rows > 0) {
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-  <script>
-    document.querySelector('#modal2').style.display = 'none';
-    document.querySelector('.btn2').style.backgroundColor = 'white';
+    <script>
+        document.querySelector('#modal2').style.display = 'none';
+        document.querySelector('.btn2').style.backgroundColor = 'white';
 
-    document.querySelector('.btn1').addEventListener('click', showBtn1);
+      document.querySelector('.btn1').addEventListener('click', showBtn1);
 
-    function showBtn1(a) {
+      function showBtn1(a) {
 
-      document.querySelector('.btn1').style.width = '100%';
-      document.querySelector('.btn2').style.backgroundColor = 'white';
-      document.querySelector('.btn1').style.backgroundColor = '#28A746';
-      document.querySelector('#modal1').style.display = 'block';
-      document.querySelector('#modal2').style.display = 'none';
+        document.querySelector('.btn1').style.width = '100%';
+        document.querySelector('.btn2').style.backgroundColor = 'white';
+        document.querySelector('.btn1').style.backgroundColor = '#28A746';
+        document.querySelector('#modal1').style.display = 'block';
+        document.querySelector('#modal2').style.display = 'none';
 
       a.preventDefault();
-    }
+      }
   </script>
   <script>
 
-    document.querySelector('.btn2').addEventListener('click', showBtn2);
+      document.querySelector('.btn2').addEventListener('click', showBtn2);
 
-    function showBtn2(b) {
-      document.querySelector('.btn2').style.width = '100%';
-      document.querySelector('.btn1').style.backgroundColor = 'white';
-      document.querySelector('.btn2').style.backgroundColor = '#28A746';
-      document.querySelector('#modal1').style.display = 'none';
-      document.querySelector('#modal2').style.display = 'block';
+      function showBtn2(b) {
+        document.querySelector('.btn2').style.width = '100%';
+        document.querySelector('.btn1').style.backgroundColor = 'white';
+        document.querySelector('.btn2').style.backgroundColor = '#28A746';
+        document.querySelector('#modal1').style.display = 'none';
+        document.querySelector('#modal2').style.display = 'block';
       b.preventDefault();
-    }
+      }
   </script>
 
 </body>

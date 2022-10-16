@@ -228,6 +228,7 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
+
                     <h1 class="intro-title mb-4">
                       <span class="color-b">Sell </span> Your
                       <br> Properties

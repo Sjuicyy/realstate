@@ -437,14 +437,14 @@
     <script src="js/main.js"></script>
 
     <script>
-
+        document.querySelector('#edit').style.display = 'none';
     
         document.querySelector('.btn1').addEventListener('click', showBtn1);
     
         function showBtn1(a) {
-          document.querySelector('#btn').style.color = 'red';
           document.querySelector('#view').style.display = 'none';
-          document.querySelector('#edit').style.display = 'block';
+          document.querySelector('#modal2').style.display = 'none';
+    
           a.preventDefault();
         }
       </script>
