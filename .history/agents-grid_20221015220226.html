@@ -204,11 +204,6 @@
   <section class="agents-grid grid">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <a href="#list">
-            <div class="btn float-right btn-success mb-3" id="change">Change view</div>
-          </a>
-        </div>
         <div class="col-md-4">
           <div class="card-box-d">
             <div class="card-img-d">
@@ -608,9 +603,7 @@
   <!--/ Agents Grid End /-->
 
 
-  <!-- Agent list start -->
-
-  <div class=" form container" id="list">
+  <div class=" form container">
     <div class="table-responsive  text-nowrap">
       <!-- information table start  -->
       <div>
@@ -622,7 +615,7 @@
               <th>Name</th>
               <th>Address</th>
               <th>Contact</th>
-              <th>Action</th>
+              <th>Conntect</th>
             </tr>
 
           </thead>
