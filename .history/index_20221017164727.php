@@ -27,12 +27,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <style>
-    .btn1:hover{
-      background-color: #28A746;
-      color: #28A746;
-    }
-  </style>
+
 
   <!-- =======================================================
     Theme Name: EstateAgency
@@ -49,15 +44,15 @@
 
 <body>
 
-  <div class="click-closed"></div>
+  <div class="click-closed1"></div>
   <!--/ Form Search Star /-->
-  <div class="box-collapse">
+  <div class="box-collapse1">
     <div class="title-box-d">
       <h3 class="title-d">Welcome to Agent Space</h3>
 
     </div>
-    <span class="close-box-collapse right-boxed ion-ios-close"></span>
-    <div class="box-collapse-wrap form">
+    <span class="close-box-collapse1 right-boxed ion-ios-close"></span>
+    <div class="box-collapse-wrap1 form">
       <div class="row">
 
         <div class="col">
@@ -999,15 +994,16 @@ if ($result->num_rows > 0) {
     document.querySelector('#modal2').style.display = 'none';
     document.querySelector('.btn2').style.backgroundColor = 'white';
     document.querySelector('.btn2').style.color = 'black';
-    document.querySelector('.btn1').style.color = 'white';
 
     document.querySelector('.btn1').addEventListener('click', showBtn1);
 
     function showBtn1(a) {
+
+
       document.querySelector('.btn2').style.backgroundColor = 'white';
       document.querySelector('.btn2').style.color = 'black';
       document.querySelector('.btn1').style.backgroundColor = '#28A746';
-      document.querySelector('.btn1').style.color = 'white';
+      document.querySelector('.btn1').style.color = 'black';
       document.querySelector('#modal1').style.display = 'block';
       document.querySelector('#modal2').style.display = 'none';
 
@@ -1019,10 +1015,10 @@ if ($result->num_rows > 0) {
     document.querySelector('.btn2').addEventListener('click', showBtn2);
 
     function showBtn2(b) {
+
       document.querySelector('.btn1').style.backgroundColor = 'white';
       document.querySelector('.btn1').style.color = 'black';
       document.querySelector('.btn2').style.backgroundColor = '#28A746';
-      document.querySelector('.btn2').style.color = 'white';
       document.querySelector('#modal1').style.display = 'none';
       document.querySelector('#modal2').style.display = 'block';
       b.preventDefault();

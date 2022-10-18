@@ -27,13 +27,6 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <style>
-    .btn1:hover{
-      background-color: #28A746;
-      color: #28A746;
-    }
-  </style>
-
   <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
@@ -44,7 +37,6 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
   nonce="0jwGYLXn"></script>
-
 
 
 <body>
@@ -65,7 +57,7 @@
           </a>
         </div>
         <div class="col">
-          <button type="submit" class="btn btn-a w-100 btn2">SignUp</button>
+          <button type="submit" class="btn btn-b w-100 btn2">SignUp</button>
           </a>
         </div>
 
@@ -998,16 +990,14 @@ if ($result->num_rows > 0) {
   <script>
     document.querySelector('#modal2').style.display = 'none';
     document.querySelector('.btn2').style.backgroundColor = 'white';
-    document.querySelector('.btn2').style.color = 'black';
-    document.querySelector('.btn1').style.color = 'white';
 
     document.querySelector('.btn1').addEventListener('click', showBtn1);
 
     function showBtn1(a) {
+
+      document.querySelector('.btn1').style.width = '100%';
       document.querySelector('.btn2').style.backgroundColor = 'white';
-      document.querySelector('.btn2').style.color = 'black';
       document.querySelector('.btn1').style.backgroundColor = '#28A746';
-      document.querySelector('.btn1').style.color = 'white';
       document.querySelector('#modal1').style.display = 'block';
       document.querySelector('#modal2').style.display = 'none';
 
@@ -1019,10 +1009,9 @@ if ($result->num_rows > 0) {
     document.querySelector('.btn2').addEventListener('click', showBtn2);
 
     function showBtn2(b) {
+      document.querySelector('.btn2').style.width = '100%';
       document.querySelector('.btn1').style.backgroundColor = 'white';
-      document.querySelector('.btn1').style.color = 'black';
       document.querySelector('.btn2').style.backgroundColor = '#28A746';
-      document.querySelector('.btn2').style.color = 'white';
       document.querySelector('#modal1').style.display = 'none';
       document.querySelector('#modal2').style.display = 'block';
       b.preventDefault();

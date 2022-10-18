@@ -30,7 +30,7 @@
   <style>
     .btn1:hover{
       background-color: #28A746;
-      color: #28A746;
+      color: ;
     }
   </style>
 

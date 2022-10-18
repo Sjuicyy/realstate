@@ -27,12 +27,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <style>
-    .btn1:hover{
-      background-color: #28A746;
-      color: #28A746;
-    }
-  </style>
+
 
   <!-- =======================================================
     Theme Name: EstateAgency
@@ -57,7 +52,7 @@
 
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
-    <div class="box-collapse-wrap form">
+    <div class="box-collapse-wrap1 form">
       <div class="row">
 
         <div class="col">
@@ -1004,6 +999,8 @@ if ($result->num_rows > 0) {
     document.querySelector('.btn1').addEventListener('click', showBtn1);
 
     function showBtn1(a) {
+
+
       document.querySelector('.btn2').style.backgroundColor = 'white';
       document.querySelector('.btn2').style.color = 'black';
       document.querySelector('.btn1').style.backgroundColor = '#28A746';
@@ -1019,6 +1016,7 @@ if ($result->num_rows > 0) {
     document.querySelector('.btn2').addEventListener('click', showBtn2);
 
     function showBtn2(b) {
+
       document.querySelector('.btn1').style.backgroundColor = 'white';
       document.querySelector('.btn1').style.color = 'black';
       document.querySelector('.btn2').style.backgroundColor = '#28A746';

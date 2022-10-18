@@ -28,10 +28,7 @@
   <link href="css/style.css" rel="stylesheet">
 
   <style>
-    .btn1:hover{
-      background-color: #28A746;
-      color: #28A746;
-    }
+    .btn1:hover
   </style>
 
   <!-- =======================================================

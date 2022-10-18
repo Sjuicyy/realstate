@@ -998,14 +998,14 @@ if ($result->num_rows > 0) {
   <script>
     document.querySelector('#modal2').style.display = 'none';
     document.querySelector('.btn2').style.backgroundColor = 'white';
-    document.querySelector('.btn2').style.color = 'black';
+    document.querySelector('.btn2').style.color = 'black1';
     document.querySelector('.btn1').style.color = 'white';
 
     document.querySelector('.btn1').addEventListener('click', showBtn1);
 
     function showBtn1(a) {
       document.querySelector('.btn2').style.backgroundColor = 'white';
-      document.querySelector('.btn2').style.color = 'black';
+      document.querySelector('.btn2').style.color = 'black1';
       document.querySelector('.btn1').style.backgroundColor = '#28A746';
       document.querySelector('.btn1').style.color = 'white';
       document.querySelector('#modal1').style.display = 'block';
@@ -1020,7 +1020,7 @@ if ($result->num_rows > 0) {
 
     function showBtn2(b) {
       document.querySelector('.btn1').style.backgroundColor = 'white';
-      document.querySelector('.btn1').style.color = 'black';
+      document.querySelector('.btn1').style.color = 'black1';
       document.querySelector('.btn2').style.backgroundColor = '#28A746';
       document.querySelector('.btn2').style.color = 'white';
       document.querySelector('#modal1').style.display = 'none';

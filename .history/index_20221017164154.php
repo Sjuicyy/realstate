@@ -29,8 +29,10 @@
 
   <style>
     .btn1:hover{
-      background-color: #28A746;
-      color: #28A746;
+      color: rgb(183, 25, 25);
+    }
+    .btn1:hover{
+      color: rgb(183, 25, 25);
     }
   </style>
 
@@ -51,7 +53,7 @@
 
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
-  <div class="box-collapse">
+  <div class="box-collapse1">
     <div class="title-box-d">
       <h3 class="title-d">Welcome to Agent Space</h3>
 
@@ -998,16 +1000,14 @@ if ($result->num_rows > 0) {
   <script>
     document.querySelector('#modal2').style.display = 'none';
     document.querySelector('.btn2').style.backgroundColor = 'white';
-    document.querySelector('.btn2').style.color = 'black';
-    document.querySelector('.btn1').style.color = 'white';
 
     document.querySelector('.btn1').addEventListener('click', showBtn1);
 
     function showBtn1(a) {
+
+      document.querySelector('.btn1').style.width = '100%';
       document.querySelector('.btn2').style.backgroundColor = 'white';
-      document.querySelector('.btn2').style.color = 'black';
       document.querySelector('.btn1').style.backgroundColor = '#28A746';
-      document.querySelector('.btn1').style.color = 'white';
       document.querySelector('#modal1').style.display = 'block';
       document.querySelector('#modal2').style.display = 'none';
 
@@ -1019,10 +1019,9 @@ if ($result->num_rows > 0) {
     document.querySelector('.btn2').addEventListener('click', showBtn2);
 
     function showBtn2(b) {
+      document.querySelector('.btn2').style.width = '100%';
       document.querySelector('.btn1').style.backgroundColor = 'white';
-      document.querySelector('.btn1').style.color = 'black';
       document.querySelector('.btn2').style.backgroundColor = '#28A746';
-      document.querySelector('.btn2').style.color = 'white';
       document.querySelector('#modal1').style.display = 'none';
       document.querySelector('#modal2').style.display = 'block';
       b.preventDefault();

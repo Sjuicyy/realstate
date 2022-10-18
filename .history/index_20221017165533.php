@@ -27,12 +27,9 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <style>
-    .btn1:hover{
-      background-color: #28A746;
-      color: #28A746;
-    }
-  </style>
+  <script>
+    .btn1:onhov
+  </script>
 
   <!-- =======================================================
     Theme Name: EstateAgency
