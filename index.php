@@ -288,11 +288,11 @@
                 <span class="fa fa-gamepad"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">बिज्ञापन</h2>
+                <h2 class="title-c mx-2">बिज्ञापन</h2>
               </div>
             </div>
             <div class="card-body-c">
-              <p class="content-c">
+              <p class="content-c"> 
                 फ्री बिज्ञान गरि आफ्नो घर,जग्गा तथा व्यवसाय किन्नु ,बेच्नु वा भाडामा लिन दिन परेमा ।
               </p>
             </div>
@@ -307,7 +307,7 @@
                 <span class="fa fa-usd"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">घर जग्गा बिक्री </h2>
+                <h2 class="title-c mx-2">घर जग्गा बिक्री </h2>
               </div>
             </div>
             <div class="card-body-c">
@@ -329,7 +329,7 @@
                 <span class="fa fa-home"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">सूचना </h2>
+                <h2 class="title-c mx-2">सूचना </h2>
               </div>
             </div>
             <div class="card-body-c">
