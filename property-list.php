@@ -92,7 +92,7 @@
             <div class="table-responsive  text-nowrap">
                 <!-- information table start  -->
                 <div>
-                    <a href="./Add-Property.html">
+                    <a href="./Add-Property.php">
                         <div class="btn float-right btn-success mb-3">+Add Property</div>
                     </a>
                     <table class="table">

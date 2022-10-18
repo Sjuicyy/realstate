@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>EstateAgency Bootstrap Template</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <a href="profile.php">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  </a>
   <meta content="" name="keywords">
   <meta content="" name="description">
 
@@ -633,7 +635,9 @@
                 +977-9867867202
               </td>
               <td>
-                <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                <a href="profile.php">
+                  <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>
               </td>
             </tr>
@@ -654,7 +658,9 @@
                 +977-9867867202
               </td>
               <td>
-                <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                <a href="profile.php">
+                  <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>
               </td>
             </tr>
@@ -675,7 +681,9 @@
                 +977-9867867202
               </td>
               <td>
-                <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                <a href="profile.php">
+                  <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>
               </td>
             </tr>
@@ -696,7 +704,9 @@
                 +977-9867867202
               </td>
               <td>
-                <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                <a href="profile.php">
+                  <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>
               </td>
             </tr>
@@ -717,7 +727,9 @@
                 +977-9867867202
               </td>
               <td>
-                <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                <a href="profile.php">
+                  <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
+                </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>
               </td>
             </tr>
