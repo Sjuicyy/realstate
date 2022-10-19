@@ -218,10 +218,6 @@ $result = mysqli_fetch_assoc($data);
 ?>
     <div class="container" id="grid">
       <div class="row">
-
-
-
-
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">

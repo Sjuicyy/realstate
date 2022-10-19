@@ -28,9 +28,21 @@
   <link href="css/style.css" rel="stylesheet">
 
   <style>
-    .btn1:hover {
-      background-color: #28A746;
-      color: #28A746;
+    .logout {
+      display: none;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      margin-left: -200px;
+      margin-top: 40px;
+      background-color: #2eca6ad5;
+      padding: 5px;
+      border: 2px solid #2ECA69;
+      border-radius: 6px;
+      width: 300px;
+    }
+
+    .icon:hover .logout {
+      display: block;
     }
   </style>
 
@@ -216,10 +228,20 @@
       </div>
       <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
-        <span class="fa fa-user-plus" aria-hidden="true"></span>        
+        <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
-      <div >
-        <img src="img/Agent/11.jpg" alt=""  class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px" >
+      <div class="icon">
+        <a href="./profile.php">
+          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle  float-right"
+            style="width:40px ;height:40px;border-radius:50px">
+        </a>
+        <div class="logout text-center">
+          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle"
+            style="width:100px ;height:100px;border-radius:50px">
+          <p class="mt-4 h4"> Pritam SirRR</p>
+          <p>PritamDCZar@gmail.com</p>
+          <button class="btn btn-b w-100 rounded-4">Log out</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -358,14 +380,6 @@
 
   <!--/ Property Star /-->
 
-  <?php
-require_once 'Connection.php';
-$sql = "SELECT*FROM property";
-$data = mysqli_query($conn, $sql);
-$total = mysqli_num_rows($data);
-$result = mysqli_fetch_assoc($data);
-?>
-
   <section class="section-property section-t8">
     <div class="container">
       <div class="row">
@@ -386,158 +400,21 @@ $result = mysqli_fetch_assoc($data);
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property4-4.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:100%" >
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.php"><?php echo $result['name']; ?>
-                      <br /><?php echo $result['address']; ?></a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $   <?php echo $result['price']; ?>  </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>  <?php echo $result['area']; ?>  m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>  <?php echo $result['beds']; ?>  </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>  <?php echo $result['baths']; ?>  </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-b">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property3-3.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:350px" >
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="property-single.php">157 West
-                      <br /> Central Park</a>
+                    <a href="property-single.php">206 Mount
+                      <br /> Olive Road Two</a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
                     <span class="price-a">rent | $ 12.000</span>
                   </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-b">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property1-1.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:350px" >
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="property-single.php">245 Azabu
-                      <br /> Nishi Park let</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-b">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property2-2.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:350px" >
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="property-single.php">204 Montal
-                      <br /> South Bela Two</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
+                  <a href="#" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -592,22 +469,21 @@ $result = mysqli_fetch_assoc($data);
       <div class="row">
         <div class="col-md-4">
           <?php
-require_once 'Connection.php';
-$sql = "SELECT * FROM agent";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
+  require_once 'Connection.php';
+  $sql = "SELECT * FROM agent";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
   while ($data = mysqli_fetch_array($result)) {
-?>
-
+  ?>
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%"  >
+              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%">
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="agent-single.php" class="link-two">
+                    <a href="profile-public.php" class="link-two">
                       <?php echo $data['Name']; ?>
                     </a>
                   </h3>
@@ -635,12 +511,107 @@ if ($result->num_rows > 0) {
             </div>
           </div>
           <?php
-        }
-      }
-      ?>
-
+  }
+  }
+  ?>
         </div>
+        <div class="col-md-4">
+          <?php
+  require_once 'Connection.php';
+  $sql = "SELECT * FROM agent";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+  while ($data = mysqli_fetch_array($result)) {
+  ?>
+          <div class="card-box-d">
+            <div class="card-img-d">
+              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%">
+            </div>
+            <div class="card-overlay card-overlay-hover">
+              <div class="card-header-d">
+                <div class="card-title-d align-self-center">
+                  <h3 class="title-d">
+                    <a href="profile-public.php" class="link-two">
+                      <?php echo $data['Name']; ?>
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <div class="card-body-d">
+                <p class="content-d color-text-a" align="justify">
+                  <?php echo $data['Address']; ?>
+                  <br>
+                  Member since
+                  <?php echo $data['Rdate']; ?>
+                </p>
+                <div class="info-agents color-a">
+                  <p>
+                    <strong>Phone: </strong>
+                    <?php echo $data['Phone']; ?>
+                  </p>
+                  <p>
+                    <strong>Email: </strong>
+                    <?php echo $data['Email']; ?>
+                  </p>
+                </div>
+              </div>
 
+            </div>
+          </div>
+          <?php
+  }
+  }
+  ?>
+        </div>
+        <div class="col-md-4">
+          <?php
+  require_once 'Connection.php';
+  $sql = "SELECT * FROM agent";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+  while ($data = mysqli_fetch_array($result)) {
+  ?>
+          <div class="card-box-d">
+            <div class="card-img-d">
+              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%">
+            </div>
+            <div class="card-overlay card-overlay-hover">
+              <div class="card-header-d">
+                <div class="card-title-d align-self-center">
+                  <h3 class="title-d">
+                    <a href="profile-public.php" class="link-two">
+                      <?php echo $data['Name']; ?>
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <div class="card-body-d">
+                <p class="content-d color-text-a" align="justify">
+                  <?php echo $data['Address']; ?>
+                  <br>
+                  Member since
+                  <?php echo $data['Rdate']; ?>
+                </p>
+                <div class="info-agents color-a">
+                  <p>
+                    <strong>Phone: </strong>
+                    <?php echo $data['Phone']; ?>
+                  </p>
+                  <p>
+                    <strong>Email: </strong>
+                    <?php echo $data['Email']; ?>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <?php
+  }
+  }
+  ?>
+        </div>
+        
       </div>
     </div>
   </section>
