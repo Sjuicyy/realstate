@@ -28,7 +28,7 @@
   <link href="css/style.css" rel="stylesheet">
 
   <style>
-    .btn1:hover{
+    .btn1:hover {
       background-color: #28A746;
       color: #28A746;
     }
@@ -216,8 +216,11 @@
       </div>
       <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
-        <span class="fa fa-user-plus" aria-hidden="true"></span>
+        <span class="fa fa-user-plus" aria-hidden="true"></span>        
       </button>
+      <div >
+        <img src="img/Agent/11.jpg" alt=""  class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px" >
+      </div>
     </div>
   </nav>
   <!--/ Nav End /-->
@@ -292,7 +295,7 @@
               </div>
             </div>
             <div class="card-body-c">
-              <p class="content-c"> 
+              <p class="content-c">
                 फ्री बिज्ञान गरि आफ्नो घर,जग्गा तथा व्यवसाय किन्नु ,बेच्नु वा भाडामा लिन दिन परेमा ।
               </p>
             </div>
@@ -316,7 +319,7 @@
               </p>
             </div>
             <div class="card-footer-c">
-                           <!-- <a href="#" class="link-c link-icon">Read more
+              <!-- <a href="#" class="link-c link-icon">Read more
                              <span class="ion-ios-arrow-forward"></span>
                            </a> -->
             </div>
@@ -354,6 +357,15 @@
   <!--/ Services End /-->
 
   <!--/ Property Star /-->
+
+  <?php
+require_once 'Connection.php';
+$sql = "SELECT*FROM property";
+$data = mysqli_query($conn, $sql);
+$total = mysqli_num_rows($data);
+$result = mysqli_fetch_assoc($data);
+?>
+
   <section class="section-property section-t8">
     <div class="container">
       <div class="row">
@@ -374,19 +386,19 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+              <img src="img/property4-4.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:100%" >
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="property-single.php">206 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="property-single.php"><?php echo $result['name']; ?>
+                      <br /><?php echo $result['address']; ?></a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a">rent | $   <?php echo $result['price']; ?>  </span>
                   </div>
                   <a href="property-single.php" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -396,21 +408,17 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Area</h4>
-                      <span>340m
+                      <span>  <?php echo $result['area']; ?>  m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>  <?php echo $result['beds']; ?>  </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
+                      <span>  <?php echo $result['baths']; ?>  </span>
                     </li>
                   </ul>
                 </div>
@@ -421,7 +429,7 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-3.jpg" alt="" class="img-a img-fluid">
+              <img src="img/property3-3.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:350px" >
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
@@ -468,7 +476,7 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-7.jpg" alt="" class="img-a img-fluid">
+              <img src="img/property1-1.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:350px" >
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
@@ -515,7 +523,7 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
+              <img src="img/property2-2.jpg" alt="" class="img-a img-fluid " style="height: 465px;width:350px" >
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
@@ -593,7 +601,7 @@ if ($result->num_rows > 0) {
 
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" class="img-d img-fluid">
+              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%"  >
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
@@ -627,12 +635,10 @@ if ($result->num_rows > 0) {
             </div>
           </div>
           <?php
+        }
+      }
+      ?>
 
-  }
-
-}
-
-?>
         </div>
 
       </div>

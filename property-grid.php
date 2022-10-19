@@ -41,6 +41,9 @@
 
 <body>
 
+
+
+
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
   <div class="box-collapse">
@@ -136,13 +139,10 @@
   <!--/ Form Search End /-->
 
   <!--/ Nav Start /-->
-<nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
       </button>
       <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
@@ -174,11 +174,11 @@
       </button>
     </div>
   </nav>
-  
+
   <!-- ===== nav end ====== -->
-  
-  
-  
+
+
+
 
   <!--/ Intro Single star /-->
   <section class="intro-single">
@@ -207,24 +207,43 @@
     </div>
 
     <!--/ Property Grid Start /-->
+
+
+    <?php
+require_once 'Connection.php';
+$sql = "SELECT*FROM property";
+$data = mysqli_query($conn, $sql);
+$total = mysqli_num_rows($data);
+$result = mysqli_fetch_assoc($data);
+?>
     <div class="container" id="grid">
       <div class="row">
+
+
+
+
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-1.jpg" alt="" class="img-a img-fluid">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
                   </div>
                   <a href="property-single.php" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -234,21 +253,22 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Area</h4>
-                      <span>340m
+                      <span>
+                        <?php echo $result["area"]; ?>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -256,22 +276,33 @@
             </div>
           </div>
         </div>
+
+
+
+
+
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-3.jpg" alt="" class="img-a img-fluid">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
                   </div>
                   <a href="property-single.php" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -281,21 +312,22 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Area</h4>
-                      <span>340m
+                      <span>
+                        <?php echo $result["area"]; ?>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -303,22 +335,31 @@
             </div>
           </div>
         </div>
+
+
+
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
                   </div>
                   <a href="property-single.php" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -328,21 +369,22 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Area</h4>
-                      <span>340m
+                      <span>
+                        <?php echo $result["area"]; ?>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -350,22 +392,31 @@
             </div>
           </div>
         </div>
+
+
+
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-7.jpg" alt="" class="img-a img-fluid">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
                   </div>
                   <a href="property-single.php" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -375,21 +426,22 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Area</h4>
-                      <span>340m
+                      <span>
+                        <?php echo $result["area"]; ?>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -397,22 +449,31 @@
             </div>
           </div>
         </div>
+
+
+
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-8.jpg" alt="" class="img-a img-fluid">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
                   </div>
                   <a href="property-single.php" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -422,21 +483,22 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Area</h4>
-                      <span>340m
+                      <span>
+                        <?php echo $result["area"]; ?>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -444,22 +506,31 @@
             </div>
           </div>
         </div>
+
+
+
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
                   </div>
                   <a href="property-single.php" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
@@ -469,21 +540,22 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Area</h4>
-                      <span>340m
+                      <span>
+                        <?php echo $result["area"]; ?>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -491,6 +563,11 @@
             </div>
           </div>
         </div>
+
+
+
+
+
       </div>
       <div class="row">
         <div class="col-sm-12">
@@ -542,114 +619,123 @@
 
           </thead>
           <tbody>
-            <tr>
-              <td>
-                1
-              </td>
-              <td>
-                <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
-              </td>
-              <td>
-                Santa House
-              </td>
-              <td>
-                Imadol,Lalitpur
-              </td>
-              <td>
-                Rs 1,20,00,000
-              </td>
-              <td>
-                <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
-                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                2
-              </td>
-              <td>
-                <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
-              </td>
-              <td>
-                Santa House
-              </td>
-              <td>
-                Imadol,Lalitpur
-              </td>
-              <td>
-                Rs 80,00,000
-              </td>
-              <td>
-                <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
-                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                3
-              </td>
-              <td>
-                <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
-              </td>
-              <td>
-                Santa House
-              </td>
-              <td>
-                Imadol,Lalitpur
-              </td>
-              <td>
-                Rs 80,00,000
 
-              </td>
-              <td>
-                <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
-                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
-              </td>
-            </tr>
+
+
             <tr>
               <td>
-                4
+                <?php echo $result["Id"]; ?>
               </td>
               <td>
-                <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
+                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
+                  class="img-d img-fluid">
               </td>
               <td>
-                Santa House
+                <?php echo $result["name"]; ?>
               </td>
               <td>
-                Imadol,Lalitpur
+                <?php echo $result["address"]; ?>
               </td>
               <td>
-                Rs 80,00,000
+                <?php echo $result["price"]; ?>
+              </td>
+              <td>
+                <a href="property-single.php">
 
-              </td>
-              <td>
-                <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
+                  <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
+                </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
               </td>
             </tr>
+
+
+
             <tr>
               <td>
-                5
+                <?php echo $result["Id"]; ?>
               </td>
               <td>
-                <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
+                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
+                  class="img-d img-fluid">
               </td>
               <td>
-                Santa House
+                <?php echo $result["name"]; ?>
               </td>
               <td>
-                Imadol,Lalitpur
+                <?php echo $result["address"]; ?>
               </td>
               <td>
-                Rs 80,00,000
+                <?php echo $result["price"]; ?>
+              </td>
+              <td>
+                <a href="property-single.php">
 
-              </td>
-              <td>
-                <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
+                  <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
+                </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
               </td>
             </tr>
+
+
+
+            <tr>
+              <td>
+                <?php echo $result["Id"]; ?>
+              </td>
+              <td>
+                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
+                  class="img-d img-fluid">
+              </td>
+              <td>
+                <?php echo $result["name"]; ?>
+              </td>
+              <td>
+                <?php echo $result["address"]; ?>
+              </td>
+              <td>
+                <?php echo $result["price"]; ?>
+              </td>
+              <td>
+                <a href="property-single.php">
+
+                  <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
+                </a>
+                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
+              </td>
+            </tr>
+
+
+
+            <tr>
+              <td>
+                <?php echo $result["Id"]; ?>
+              </td>
+              <td>
+                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
+                  class="img-d img-fluid">
+              </td>
+              <td>
+                <?php echo $result["name"]; ?>
+              </td>
+              <td>
+                <?php echo $result["address"]; ?>
+              </td>
+              <td>
+                <?php echo $result["price"]; ?>
+              </td>
+              <td>
+                <a href="property-single.php">
+
+                  <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
+                </a>
+                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
+              </td>
+            </tr>
+
+
+
+
+
           </tbody>
         </table>
         <hr>

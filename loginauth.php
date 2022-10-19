@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION['User'] = $_POST['email'];
         $_SESSION['status'] = 'logedin';
         echo"login successful";
-        header('location:property-list.php');
+        header('location:property-admin.php');
     }
     else{
         echo"login unsuccessful";
