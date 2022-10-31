@@ -217,7 +217,12 @@ $total = mysqli_num_rows($data);
 $result = mysqli_fetch_assoc($data);
 ?>
     <div class="container" id="grid">
-      <div class="row">
+
+
+
+
+    
+      <div class="row" id="111">
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -272,11 +277,6 @@ $result = mysqli_fetch_assoc($data);
             </div>
           </div>
         </div>
-
-
-
-
-
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -331,9 +331,6 @@ $result = mysqli_fetch_assoc($data);
             </div>
           </div>
         </div>
-
-
-
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -388,9 +385,13 @@ $result = mysqli_fetch_assoc($data);
             </div>
           </div>
         </div>
+      </div>
 
 
 
+
+
+      <div class="row" id="222">
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -445,9 +446,6 @@ $result = mysqli_fetch_assoc($data);
             </div>
           </div>
         </div>
-
-
-
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -502,9 +500,6 @@ $result = mysqli_fetch_assoc($data);
             </div>
           </div>
         </div>
-
-
-
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -565,23 +560,198 @@ $result = mysqli_fetch_assoc($data);
 
 
       </div>
+      <div class="row" id="333">
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
+                  </div>
+                  <a href="property-single.php" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>
+                        <?php echo $result["area"]; ?>m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
+                  </div>
+                  <a href="property-single.php" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>
+                        <?php echo $result["area"]; ?>m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
+                class="img-d img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">
+                      <?php echo $result["name"]; ?>
+                      <br />
+                      <?php echo $result["address"]; ?>
+                    </a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent |
+                      <?php echo $result["price"]; ?>
+                    </span>
+                  </div>
+                  <a href="property-single.php" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>
+                        <?php echo $result["area"]; ?>m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>
+                        <?php echo $result["beds"]; ?>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>
+                        <?php echo $result["baths"]; ?>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+
+
       <div class="row">
         <div class="col-sm-12">
           <nav class="pagination-a">
             <ul class="pagination justify-content-end">
-              <li class="page-item disabled">
+              <li class="page-item">
                 <a class="page-link" href="#" tabindex="-1">
                   <span class="ion-ios-arrow-back"></span>
                 </a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">1</a>
+                <a class="page-link" href="#111">1</a>
               </li>
               <li class="page-item active">
-                <a class="page-link" href="#">2</a>
+                <a class="page-link" href="#222">2</a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">3</a>
+                <a class="page-link" href="#333">3</a>
               </li>
               <li class="page-item next">
                 <a class="page-link" href="#">

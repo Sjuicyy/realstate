@@ -161,24 +161,19 @@
               </div>
             </div>
             <div class="col-md-6 mb-2">
-              <div class="form-group">
-                <label for="price">Profile Image Upload Here</label>
-                <input type="file" class="form-control form-control-lg form-control-a" onchange="readURL(this);"
-                  name="Photo">
+              <div id="interact">
+                <div id="btn" onclick="document.getElementById('file').click()"> + </div>
+              </div>
+
+              <div id="messages">
 
               </div>
-            </div>
-            <div class="col-md-6 mb-2">
-              <div class="form-group text-center">
-                <label for="price" style="float: left">Profile Image Display Here</label>
-
-                <img src="img/user.png" id="blah" class="form-control"
-                  style="max-width:180px;width: 100%;height: auto;" />
-              </div>
+              <input type='file' multiple accept="image/*" id="file" />
             </div>
             <div class="col-md-12">
               <button type="submit" name="submit" class="btn btn-b" style="width: 100%;">Sign Up</button>
             </div>
+
 
           </div>
         </form>
@@ -247,11 +242,16 @@
   </nav>
   <!--/ Nav End /-->
 
+
+
+
+
+
+
   <!--/ Carousel Star /-->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
       <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-1.jpg)">
-        <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
             <div class="container">
@@ -270,7 +270,6 @@
         </div>
       </div>
       <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-2.jpg)">
-        <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
             <div class="container">
@@ -288,10 +287,15 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <!--/ Carousel end /-->
+
+
+
+
+
+
 
   <!--/ Services Star /-->
   <section class="section-services section-t8">
@@ -444,6 +448,320 @@
             </div>
           </div>
         </div>
+
+
+
+
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.php">206 Mount
+                      <br /> Olive Road Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="#" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.php">206 Mount
+                      <br /> Olive Road Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="#" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.php">206 Mount
+                      <br /> Olive Road Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="#" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.php">206 Mount
+                      <br /> Olive Road Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="#" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.php">206 Mount
+                      <br /> Olive Road Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="#" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.php">206 Mount
+                      <br /> Olive Road Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="#" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
       </div>
     </div>
   </section>
@@ -467,17 +785,18 @@
         </div>
       </div>
       <div class="row">
+        <?php
+        require_once 'Connection.php';
+        $sql = "SELECT * FROM agent";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          while ($data = mysqli_fetch_array($result)) {
+        ?>
         <div class="col-md-4">
-          <?php
-  require_once 'Connection.php';
-  $sql = "SELECT * FROM agent";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-  while ($data = mysqli_fetch_array($result)) {
-  ?>
+          <br>
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%">
+              <img src="img/Agent/<?php echo $data['Photo']; ?>"  width="100%" height="335px">
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
@@ -507,111 +826,13 @@
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
-          <?php
-  }
-  }
-  ?>
         </div>
-        <div class="col-md-4">
-          <?php
-  require_once 'Connection.php';
-  $sql = "SELECT * FROM agent";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-  while ($data = mysqli_fetch_array($result)) {
-  ?>
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="profile-public.php" class="link-two">
-                      <?php echo $data['Name']; ?>
-                    </a>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a" align="justify">
-                  <?php echo $data['Address']; ?>
-                  <br>
-                  Member since
-                  <?php echo $data['Rdate']; ?>
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong>
-                    <?php echo $data['Phone']; ?>
-                  </p>
-                  <p>
-                    <strong>Email: </strong>
-                    <?php echo $data['Email']; ?>
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <?php
-  }
-  }
-  ?>
-        </div>
-        <div class="col-md-4">
-          <?php
-  require_once 'Connection.php';
-  $sql = "SELECT * FROM agent";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-  while ($data = mysqli_fetch_array($result)) {
-  ?>
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="profile-public.php" class="link-two">
-                      <?php echo $data['Name']; ?>
-                    </a>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a" align="justify">
-                  <?php echo $data['Address']; ?>
-                  <br>
-                  Member since
-                  <?php echo $data['Rdate']; ?>
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong>
-                    <?php echo $data['Phone']; ?>
-                  </p>
-                  <p>
-                    <strong>Email: </strong>
-                    <?php echo $data['Email']; ?>
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <?php
-  }
-  }
-  ?>
-        </div>
-        
+        <?php
+          }
+        }
+          ?>
       </div>
     </div>
   </section>
@@ -748,16 +969,18 @@
 
   <!-- JavaScript Libraries -->
   <script>
-    function readURL(input) {
-      if (input.files && input.files[0]) {
+    function readURL(files) {
+      if (files && files[0]) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
+
           $('#blah')
             .attr('src', e.target.result);
         };
+        console.log(files[0])
 
-        reader.readAsDataURL(input.files[0]);
+        reader.readAsDataURL(files[0]);
       }
     }
   </script>
@@ -806,6 +1029,8 @@
       b.preventDefault();
     }
   </script>
+
+
 
 </body>
 
