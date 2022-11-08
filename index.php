@@ -44,6 +44,7 @@
     .icon:hover .logout {
       display: block;
     }
+
   </style>
 
   <!-- =======================================================
@@ -161,14 +162,18 @@
               </div>
             </div>
             <div class="col-md-6 mb-2">
-              <div id="interact">
-                <div id="btn" onclick="document.getElementById('file').click()"> + </div>
+              <div class="form-group">
+                <label for="price">Profile Image Upload Here</label>
+                <input type="file" class="form-control form-control-lg form-control-a" onchange="readURL(this.files);"
+                  name="Photo">
               </div>
-
-              <div id="messages">
-
+            </div>
+            <div class="col-md-6 mb-2">
+              <div class="form-group text-center">
+                <label for="price" style="float: left">Profile Image Display Here</label>
+                <img src="img/user.png" id="blah" class="form-control"
+                  style="max-width:180px;width: 100%;height: auto;" />
               </div>
-              <input type='file' multiple accept="image/*" id="file" />
             </div>
             <div class="col-md-12">
               <button type="submit" name="submit" class="btn btn-b" style="width: 100%;">Sign Up</button>
@@ -796,7 +801,7 @@
           <br>
           <div class="card-box-d">
             <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['Photo']; ?>"  width="100%" height="335px">
+              <img src="img/Agent/<?php echo $data['Photo']; ?>" alt="" width="100%" height="345px">
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
@@ -826,13 +831,14 @@
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
         <?php
           }
         }
-          ?>
+        ?>
       </div>
     </div>
   </section>
@@ -973,10 +979,10 @@
       if (files && files[0]) {
         var reader = new FileReader();
 
-        reader.onload = function (e) {
+        reader.onload = function (event) {
 
           $('#blah')
-            .attr('src', e.target.result);
+            .attr('src', event.target.result);
         };
         console.log(files[0])
 

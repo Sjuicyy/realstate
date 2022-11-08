@@ -36,7 +36,17 @@
 </head>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
-  nonce="0jwGYLXn"></script>
+  nonce="0jwGYLXn">
+  </script>
+<style>
+  #preview img {
+    max-height: 100px;
+  }
+  .files{
+    background-color: #2ECA69;
+    color: antiquewhite;
+  }
+</style>
 
 <body>
   <!-- / Form Search End /-->
@@ -101,7 +111,7 @@
                 <input type="text" class="form-control form-control-lg form-control-a" name="Address">
               </div>
             </div>
-            
+
             <div class="col-md-6 mb-2">
               <div class="form-group">
                 <label for="city">Area</label>
@@ -180,22 +190,14 @@
               </div>
             </div>
 
-
-            <div class="col-md-6 mb-2">
+            <div class="col mb-2">
               <div class="form-group">
-                <label for="price">Images</label>
-                <input type="file" class="form-control form-control-lg form-control-a" onchange="readURL(this);"
-                  name="Photo">
+                <input id="files" class="form-control form-control-a" type="file" accept="image/*" multiple hidden >
+                <label for="files" class="files form-control-lg" style="background-color: #2ECA69;color:aliceblue">+ Add Photos</label>
+                <div id="preview"></div>
               </div>
             </div>
-            <div class="col-md-6 mb-2">
-              <div class="form-group text-center">
-                <label for="price" style="float: left">Photo</label>
-                <img src="img/property-2.jpg" id="blah1" class="form-control"
-                  style="max-width:180px;width: 100%;height: auto;" />
-              </div>
-            </div>
-           
+
             <div class="col-md-12">
               <button type="submit" name="submit" class="btn btn-b" style="width: 100%;">Save</button>
             </div>
@@ -206,21 +208,6 @@
     </div>
 
   </div>
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!--/ footer Star /-->
@@ -380,6 +367,24 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <script>
+    const preview = (file) => {
+      const fr = new FileReader();
+      fr.onload = () => {
+        const img = document.createElement("img");
+        img.src = fr.result;  // String Base64 
+        img.alt = file.name;
+        document.querySelector('#preview').append(img);
+      };
+      fr.readAsDataURL(file);
+    };
+
+    document.querySelector("#files").addEventListener("change", (ev) => {
+      if (!ev.target.files) return; // Do nothing.
+      [...ev.target.files].forEach(preview);
+    });
+  </script>
 
 </body>
 
