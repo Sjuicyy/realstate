@@ -130,7 +130,7 @@
     </div>
   </div>
   <!--/ Form Search End /-->
-  
+
 
   <!--/ Nav Star /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
@@ -175,25 +175,26 @@
 
   <!--/ Intro Single star /-->
 
-  <?php 
-  require_once 'Connection.php';
-  $sql="SELECT*FROM property";
-  $data=mysqli_query($conn,$sql);
-  $total=mysqli_num_rows($data);
-  $result=mysqli_fetch_assoc($data);
-  ?>
-
-
+  <?php      
+  $id=$_GET['id'];  
+        require_once 'Connection.php';
+        $sql = "SELECT * FROM property where id=$id";
+        $result = $conn->query($sql);
+         if ($result->num_rows > 0)
+          {
+          while ($data = mysqli_fetch_array($result)) 
+          {
+        ?>
   <section class="intro-single">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
             <h1 class="title-single">
-              <?php echo $result ["name"]; ?>
+              <?php echo $data["name"]; ?>
             </h1>
             <span class="color-text-a">
-              <?php echo $result ["address"]; ?>
+              <?php echo $data["address"]; ?>
             </span>
           </div>
         </div>
@@ -209,14 +210,14 @@
         <div class="col-sm-12">
           <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
             <div class="carousel-item-b" style="width:100%;height:150px;">
-              <img src="img/<?php echo $result['photo']; ?>" width="360px" height="150px" alt="" class="img-d img-fluid">
-              
+              <img src="img/house/<?php echo $data["image"]; ?>" width="360px" height="450px" alt="" class="img-d img-fluid">
+              <!-- <img src="img/house/<?php echo $data['image']; ?>" alt="" class="img-a img-fluid"> -->
             </div>
             <div class="carousel-item-b">
-              <img src="img/slide-3.jpg" alt="">
+              <img src="img/slide-3.jpg" alt="" width="360px" height="450px">
             </div>
             <div class="carousel-item-b">
-              <img src="img/slide-1.jpg" alt="">
+              <img src="img/slide-1.jpg" alt="" width="360px" height="450px">
             </div>
           </div>
           <div class="row justify-content-between">
@@ -224,10 +225,12 @@
               <div class="property-price d-flex justify-content-center foo">
                 <div class="card-header-c d-flex">
                   <div class="card-box-ico">
-                    <span class="ion-money">$</span>
+                    <span class="ion-money">Rs.</span>
                   </div>
                   <div class="card-title-c align-self-center">
-                    <h5 class="title-c mx-2"><?php echo $result ["price"]; ?></h5>
+                    <h5 class="title-c mx-2">
+                      <?php echo $data["price"];?>
+                    </h5>
                   </div>
                 </div>
               </div>
@@ -244,41 +247,44 @@
                     <li class="d-flex justify-content-between">
                       <strong>Property ID:</strong>
                       <span>
-                        <?php echo $result ["Id"]; ?>
+                        <?php echo $data["id"]; ?>
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Location:</strong>
                       <span>
-                        <?php echo $result ["address"]; ?>
+                        <?php echo $data["address"]; ?>
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Property Type:</strong>
-                      <span><?php echo $result ["property_type"]; ?></span>
+                      <span>
+                        <?php echo $data["type"]; ?>
+                      </span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Status:</strong>
                       <span>
-                        <?php echo $result ["status"]; ?>
+                        <?php echo $data["status"]; ?>
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Area:</strong>
-                      <span><?php echo $result ["area"]; ?> m
+                      <span>
+                        <?php echo $data["area"]; ?> m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Beds:</strong>
                       <span>
-                        <?php echo $result ["beds"]; ?>
+                        <?php echo $data["beds"]; ?>
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Baths:</strong>
                       <span>
-                        <?php echo $result ["baths"]; ?>
+                        <?php echo $data["baths"]; ?>
                       </span>
                     </li>
                   </ul>
@@ -295,10 +301,7 @@
               </div>
               <div class="property-description">
                 <p class="description color-text-a">
-                  <?php echo $result ["property_description"]; ?>
-                </p>
-                <p class="description color-text-a no-margin">
-                  <?php echo $result ["property_description"]; ?>
+                  <?php echo $data["description"]; ?>
                 </p>
               </div>
               <div class="row section-t3">
@@ -310,13 +313,19 @@
               </div>
               <div class="amenities-list color-text-a">
                 <ul class="list-a no-margin">
-                  <?php echo $result ["amenities"]; ?>
+                  <?php echo $data["other_facilities"]; ?>
 
                 </ul>
               </div>
             </div>
           </div>
         </div>
+
+
+        <?php
+          }
+        }
+        ?>
         <div class="col-md-10 offset-md-1">
           <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
             <li class="nav-item">

@@ -35,8 +35,7 @@
   ======================================================= -->
 </head>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
-    nonce="0jwGYLXn"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
 
 <body>
     <!-- / Form Search End /-->
@@ -44,15 +43,13 @@
     <!--/ Nav Star /-->
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
         <div class="container">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
-            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none"
-                data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
                 <span class="fa fa-user-plus" aria-hidden="true"></span>
             </button>
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
@@ -74,8 +71,7 @@
                     </li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block"
-                data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
                 <span class="fa fa-user-plus" aria-hidden="true"></span>
             </button>
         </div>
@@ -84,76 +80,83 @@
     <!-- ======= Intro Single ======= -->
     <section class="intro-single">
         <div class="container">
-        <?php
-        require_once 'Connection.php';
-        $sql = "SELECT * FROM agent WHERE id='1' ";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-          while ($data = mysqli_fetch_array($result)) {
-        ?>
-            <div class="row">
-                <div class="col-md-12 col-lg-8">
-                    <div class="title-single-box">
-                        <h1 class="title-single"><?php echo $data['name'] ?></h1>
-                        <span class="color-text-a">Agent </span>
+            <?php
+            $id=$_GET['id'];
+            require_once 'Connection.php';
+            $sql = "SELECT * FROM agent WHERE id='$id' ";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($data = mysqli_fetch_array($result)) {
+            ?>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8">
+                            <div class="title-single-box">
+                                <h1 class="title-single"><?php echo $data['name'] ?></h1>
+                                <span class="color-text-a">Agent </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
         </div>
     </section><!-- End Intro Single -->
     <!-- ======= Agent Single ======= -->
     <!-- ======= Agent Single ======= -->
     <div>
-    <section class="agent-single">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="agent-avatar-box">
-                                <img src="img/Agent/<?php echo $data['image']; ?>" alt="" class="agent-avatar img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-md-5 section-md-t3">
-                            <div class="agent-info-box">
-                                <div class="agent-title">
-                                    <div class="title-box-d">
-                                        <h3 class="title-d"><?php echo $data['name'] ?>
-                                        </h3>
-                                    </div>
+        <section class="agent-single">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="agent-avatar-box">
+                                    <img src="img/Agent/<?php echo $data['image']; ?>" alt="" class="agent-avatar img-fluid">
                                 </div>
-                                <div class="agent-content mb-3">
-                                    <p class="content-d color-text-a">
-                                    <?php echo $data['about'] ?>
-                                    </p>
-                                    <div class="info-agents color-a mt-5">
-                                        <strong>Mobile: </strong>
-                                        <span class="color-text-a"> <?php echo $data['phone'] ?></span>
+                            </div>
+                            <div class="col-md-5 section-md-t3">
+                                <div class="agent-info-box">
+                                    <div class="agent-title">
+                                        <div class="title-box-d">
+                                            <h3 class="title-d"><?php echo $data['name'] ?>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="agent-content mb-3">
+                                        <p class="content-d color-text-a">
+                                            <?php echo $data['about'] ?>
                                         </p>
-                                    </div>
-                                    <div class="info-agents color-a mt-5">
-                                        <strong>Email: </strong>
-                                        <span class="color-text-a"> <?php echo $data['email'] ?></span>
-                                    </div>
-                                    <div class="info-agents color-a mt-5">
-                                        <a href="<?php echo $data['facebook'] ?>">
-                                            <div class="btn w-100 btn-success mt-4">Facebook</div>
-                                        </a>
+                                        <div class="info-agents color-a mt-4">
+                                            <strong>Phone: </strong>
+                                            <span class="color-text-a"> <?php echo $data['phone'] ?></span>
+                                            </p>
+                                        </div>
+                                        <div class="info-agents color-a mt-4">
+                                            <strong>Address: </strong>
+                                            <span class="color-text-a"> <?php echo $data['address'] ?></span>
+                                            </p>
+                                        </div>
+                                        <div class="info-agents color-a mt-4">
+                                            <strong>Email: </strong>
+                                            <span class="color-text-a"> <?php echo $data['email'] ?></span>
+                                        </div>
+                                        <div class="info-agents color-a mt-5">
+                                            <a href="<?php echo $data['facebook'] ?>">
+                                                <div class="btn w-100 btn-success mt-4">Facebook</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-    </section>
-    <?php
-             }
-           }
-         ?>
+        </section>
+<?php
+                }
+            }
+?>
     </div>
+
     <div class="container">
         <div class="col-md-12 section-t8">
             <div class="title-box-d">
@@ -173,22 +176,29 @@
                     </form>
                 </div>
             </div>
+            
+            
+            <?php
+            $sql = "SELECT * FROM property WHERE agent_id='$id' ";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($data = mysqli_fetch_array($result)) {
+            ?>
             <div class="col-md-4">
                 <div class="card-box-a card-shadow">
                     <div class="img-box-a">
-                        <img src="./img/property-1.jpg" alt="" class="img-a img-fluid">
+                        <img src="img/house/<?php echo $data['image']; ?>" alt="" class="" width="100%" height="440px">
                     </div>
                     <div class="card-overlay">
                         <div class="card-overlay-a-content">
                             <div class="card-header-a">
                                 <h2 class="card-title-a">
-                                    <a href="#">204 Mount
-                                        <br /> Olive Road Two</a>
+                                    <a href="#"><?php echo $data['name']; ?>
                                 </h2>
                             </div>
                             <div class="card-body-a">
                                 <div class="price-box d-flex">
-                                    <span class="price-a">rent | $ 12.000</span>
+                                    <span class="price-a">sale | Rs. <?php echo $data['price']; ?></span>
                                 </div>
                                 <a href="#" class="link-a">Click here to view
                                     <span class="bi bi-chevron-right"></span>
@@ -198,21 +208,21 @@
                                 <ul class="card-info d-flex justify-content-around">
                                     <li>
                                         <h4 class="card-info-title">Area</h4>
-                                        <span>340m
+                                        <span><?php echo $data['area']; ?>m
                                             <sup>2</sup>
                                         </span>
                                     </li>
                                     <li>
                                         <h4 class="card-info-title">Beds</h4>
-                                        <span>2</span>
+                                        <span><?php echo $data['beds']; ?></span>
                                     </li>
                                     <li>
                                         <h4 class="card-info-title">Baths</h4>
-                                        <span>4</span>
+                                        <span><?php echo $data['baths']; ?></span>
                                     </li>
                                     <li>
                                         <h4 class="card-info-title">Garages</h4>
-                                        <span>1</span>
+                                        <span><?php echo $data['garage']; ?></span>
                                     </li>
                                 </ul>
                             </div>
@@ -220,241 +230,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                        <img src="./img/property-4.jpg" alt="" class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                        <div class="card-overlay-a-content">
-                            <div class="card-header-a">
-                                <h2 class="card-title-a">
-                                    <a href="#">204 Mount
-                                        <br /> Olive Road Two</a>
-                                </h2>
-                            </div>
-                            <div class="card-body-a">
-                                <div class="price-box d-flex">
-                                    <span class="price-a">rent | $ 12.000</span>
-                                </div>
-                                <a href="#" class="link-a">Click here to view
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div>
-                            <div class="card-footer-a">
-                                <ul class="card-info d-flex justify-content-around">
-                                    <li>
-                                        <h4 class="card-info-title">Area</h4>
-                                        <span>340m
-                                            <sup>2</sup>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Beds</h4>
-                                        <span>2</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Baths</h4>
-                                        <span>4</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Garages</h4>
-                                        <span>1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                        <img src="./img/property-3.jpg" alt="" class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                        <div class="card-overlay-a-content">
-                            <div class="card-header-a">
-                                <h2 class="card-title-a">
-                                    <a href="#">204 Mount
-                                        <br /> Olive Road Two</a>
-                                </h2>
-                            </div>
-                            <div class="card-body-a">
-                                <div class="price-box d-flex">
-                                    <span class="price-a">rent | $ 12.000</span>
-                                </div>
-                                <a href="#" class="link-a">Click here to view
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div>
-                            <div class="card-footer-a">
-                                <ul class="card-info d-flex justify-content-around">
-                                    <li>
-                                        <h4 class="card-info-title">Area</h4>
-                                        <span>340m
-                                            <sup>2</sup>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Beds</h4>
-                                        <span>2</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Baths</h4>
-                                        <span>4</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Garages</h4>
-                                        <span>1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                        <img src="./img/property-4.jpg" alt="" class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                        <div class="card-overlay-a-content">
-                            <div class="card-header-a">
-                                <h2 class="card-title-a">
-                                    <a href="#">204 Mount
-                                        <br /> Olive Road Two</a>
-                                </h2>
-                            </div>
-                            <div class="card-body-a">
-                                <div class="price-box d-flex">
-                                    <span class="price-a">rent | $ 12.000</span>
-                                </div>
-                                <a href="#" class="link-a">Click here to view
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div>
-                            <div class="card-footer-a">
-                                <ul class="card-info d-flex justify-content-around">
-                                    <li>
-                                        <h4 class="card-info-title">Area</h4>
-                                        <span>340m
-                                            <sup>2</sup>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Beds</h4>
-                                        <span>2</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Baths</h4>
-                                        <span>4</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Garages</h4>
-                                        <span>1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                        <img src="./img/property-5.jpg" alt="" class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                        <div class="card-overlay-a-content">
-                            <div class="card-header-a">
-                                <h2 class="card-title-a">
-                                    <a href="#">204 Mount
-                                        <br /> Olive Road Two</a>
-                                </h2>
-                            </div>
-                            <div class="card-body-a">
-                                <div class="price-box d-flex">
-                                    <span class="price-a">rent | $ 12.000</span>
-                                </div>
-                                <a href="#" class="link-a">Click here to view
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div>
-                            <div class="card-footer-a">
-                                <ul class="card-info d-flex justify-content-around">
-                                    <li>
-                                        <h4 class="card-info-title">Area</h4>
-                                        <span>340m
-                                            <sup>2</sup>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Beds</h4>
-                                        <span>2</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Baths</h4>
-                                        <span>4</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Garages</h4>
-                                        <span>1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                        <img src="./img/property-6.jpg" alt="" class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                        <div class="card-overlay-a-content">
-                            <div class="card-header-a">
-                                <h2 class="card-title-a">
-                                    <a href="#">204 Mount
-                                        <br /> Olive Road Two</a>
-                                </h2>
-                            </div>
-                            <div class="card-body-a">
-                                <div class="price-box d-flex">
-                                    <span class="price-a">rent | $ 12.000</span>
-                                </div>
-                                <a href="#" class="link-a">Click here to view
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div>
-                            <div class="card-footer-a">
-                                <ul class="card-info d-flex justify-content-around">
-                                    <li>
-                                        <h4 class="card-info-title">Area</h4>
-                                        <span>340m
-                                            <sup>2</sup>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Beds</h4>
-                                        <span>2</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Baths</h4>
-                                        <span>4</span>
-                                    </li>
-                                    <li>
-                                        <h4 class="card-info-title">Garages</h4>
-                                        <span>1</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <?php
+                }
+            }
+?>
+
         </div>
     </div>
     </section><!-- End Agent Single -->
@@ -533,12 +314,8 @@
                             <h3 class="w-title-a text-brand">Facebook</h3>
                         </div>
                         <div class="w-body-a">
-                            <div class="fb-page" data-href="https://www.facebook.com/floraservices2070"
-                                data-tabs="timeline" data-width="" data-height="110" data-small-header="false"
-                                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-                                <blockquote cite="https://www.facebook.com/floraservices2070"
-                                    class="fb-xfbml-parse-ignore"><a
-                                        href="https://www.facebook.com/floraservices2070">Flora
+                            <div class="fb-page" data-href="https://www.facebook.com/floraservices2070" data-tabs="timeline" data-width="" data-height="110" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                                <blockquote cite="https://www.facebook.com/floraservices2070" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/floraservices2070">Flora
                                         Services</a>
                                 </blockquote>
                             </div>
@@ -607,7 +384,7 @@
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     $('#blah')
                         .attr('src', e.target.result);
                 };

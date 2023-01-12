@@ -84,6 +84,12 @@
 
 
 
+
+
+
+
+
+
     <div class="container" style="margin-top:130px;">
         <div class="title-box-d">
             <h3 class="title-d margin-auto">All Properties</h3>
@@ -96,6 +102,9 @@
                         <div class="btn float-right btn-success mb-3">+Add Property</div>
                     </a>
                     <table class="table">
+
+
+                
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -108,18 +117,28 @@
 
                         </thead>
                         <tbody>
+
+                        <?php
+            require_once 'Connection.php';
+            $sql = "SELECT * FROM property where agent_id='1' ";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($data = mysqli_fetch_array($result)) {
+            ?>
+
+
                             <tr>
                                 <td>
-                                    1
+                                <?php echo $data['id'] ?>
                                 </td>
                                 <td>
-                                    <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
+                                    <img src="img/house/<?php echo $data['image'] ?>" alt="" height="80px" width="100px">
                                 </td>
                                 <td>
-                                    Santa House
+                                    <?php echo $data['name'] ?>
                                 </td>
                                 <td>
-                                    Imadol,Lalitpur
+                                <?php echo $data['address'] ?>
                                 </td>
                                 <td>
                                     <div class="form-check">
@@ -142,142 +161,13 @@
                                     <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Update</div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    2
-                                </td>
-                                <td>
-                                    <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
-                                </td>
-                                <td>
-                                    Santa House
-                                </td>
-                                <td>
-                                    Imadol,Lalitpur
-                                </td>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: green;" type="radio"
-                                            name="2" id="21" checked>
-                                        <label class="form-check-label" for="21">
-                                            Available
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: red;" type="radio" name="2"
-                                            id="22">
-                                        <label class="form-check-label" for="22">
-                                            Sold
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="btn-sm btn-success text-center" style="width: 80px;">Edit</div>
-                                    <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Update</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    3
-                                </td>
-                                <td>
-                                    <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
-                                </td>
-                                <td>
-                                    Santa House
-                                </td>
-                                <td>
-                                    Imadol,Lalitpur
-                                </td>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: green;" type="radio"
-                                            name="3" id="31" checked>
-                                        <label class="form-check-label" for="31">
-                                            Available
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: red;" type="radio" name="3"
-                                            id="32">
-                                        <label class="form-check-label" for="32">
-                                            Sold
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="btn-sm btn-success text-center" style="width: 80px;">Edit</div>
-                                    <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Update</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    4
-                                </td>
-                                <td>
-                                    <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
-                                </td>
-                                <td>
-                                    Santa House
-                                </td>
-                                <td>
-                                    Imadol,Lalitpur
-                                </td>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: green;" type="radio"
-                                            name="4" id="41" checked>
-                                        <label class="form-check-label" for="41">
-                                            Available
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: red;" type="radio" name="4"
-                                            id="42">
-                                        <label class="form-check-label" for="42">
-                                            Sold
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="btn-sm btn-success text-center" style="width: 80px;">Edit</div>
-                                    <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Update</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    5
-                                </td>
-                                <td>
-                                    <img src="./img/property-1.jpg" alt="" height="80px" width="100px">
-                                </td>
-                                <td>
-                                    Santa House
-                                </td>
-                                <td>
-                                    Imadol,Lalitpur
-                                </td>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: green;" type="radio"
-                                            name="5" id="51" checked>
-                                        <label class="form-check-label" for="51">
-                                            Available
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: red;" type="radio" name="5"
-                                            id="52">
-                                        <label class="form-check-label" for="52">
-                                            Sold
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="btn-sm btn-success text-center" style="width: 80px;">Edit</div>
-                                    <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Update</div>
-                                </td>
-                            </tr>
+                            
+           <?php
+                }
+            }
+?>
+
+
                         </tbody>
                     </table>
                     <hr>

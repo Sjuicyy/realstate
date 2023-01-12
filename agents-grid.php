@@ -139,7 +139,7 @@
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="profile-public.php" class="link-two">
+                    <a href="profile-public.php?id=<?php echo $data['id']?>" class="link-two">
                       <?php echo $data['name']; ?>
                   </h3>
                 </div>
@@ -256,7 +256,7 @@
                 <?php echo $data['date'] ?>
               </td>
               <td>
-                <a href="profile-public.php">
+                <a href="profile-public.php?id=<?php echo $data['id'] ?>">
                   <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
                 </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>

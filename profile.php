@@ -85,9 +85,18 @@
     <section class="intro-single">
         <div class="container">
             <div class="row">
+                
+
+            <?php
+            require_once 'Connection.php';
+            $sql = "SELECT * FROM agent WHERE id='1' ";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($data = mysqli_fetch_array($result)) {
+            ?>
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
-                        <h1 class="title-single">Aarju Silwal</h1>
+                        <h1 class="title-single"><?php echo $data['name']; ?></h1>
                         <span class="color-text-a">Agent </span>
                     </div>
                 </div>
@@ -113,32 +122,29 @@
                             <div class="agent-info-box">
                                 <div class="agent-title">
                                     <div class="title-box-d">
-                                        <h3 class="title-d">Aarju Silwal
+                                        <h3 class="title-d"><?php echo $data['name']; ?>
                                         </h3>
                                     </div>
                                 </div>
                                 <div class="agent-content mb-3">
                                     <p class="content-d color-text-a">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore error
-                                        nulla quaerat aliquid, laboriosam aliquam ducimus veritatis eveniet quos
-                                        ab modi provident, sed dolor voluptatem tempore est odio impedit eaque!
+                                    <?php echo $data['about']; ?>
                                     </p>
                                     <div class="info-agents color-a">
                                         <p>
                                             <strong>Mobile: </strong>
-                                            <span class="color-text-a"> +977-9867867202 </span>
+                                            <span class="color-text-a"> +977-<?php echo $data['phone']; ?></span>
                                         </p>
                                         <p>
                                             <strong>Email: </strong>
-                                            <span class="color-text-a"> aarzusilwal@gmail.com</span>
+                                            <span class="color-text-a"> <?php echo $data['email']; ?></span>
                                         </p>
                                         <p>
                                             <strong>Facebook: </strong>
-                                            <span class="color-text-a"> Margaret.Es</span>
-                                        </p>
-                                        <p>
-                                            <strong>Twitter: </strong>
-                                            <span class="color-text-a"> agents@example.com</span>
+                                            
+                                            <a>
+                                                <a href="<?php echo $data['facebook']; ?>" class="color-text-a"> facebook@ <?php echo $data['name']; ?></a>
+                                            </a>
                                         </p>
                                     </div>
                                 </div>
@@ -183,7 +189,10 @@
                         </div>
                     </div>
                 </div>
-
+<?php
+                }
+            }
+            ?>
             </div>
 
         </div>

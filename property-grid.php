@@ -141,12 +141,10 @@
   <!--/ Nav Start /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
       </button>
       <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
@@ -168,8 +166,7 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
     </div>
@@ -209,44 +206,42 @@
     <!--/ Property Grid Start /-->
 
 
-    <?php
-require_once 'Connection.php';
-$sql = "SELECT*FROM property";
-$data = mysqli_query($conn, $sql);
-$total = mysqli_num_rows($data);
-$result = mysqli_fetch_assoc($data);
-?>
+
     <div class="container" id="grid">
 
-
-
-
-    
       <div class="row" id="111">
+    <?php        
+        require_once 'Connection.php';
+        $sql = "SELECT * FROM property";
+        $result = $conn->query($sql);
+         if ($result->num_rows > 0)
+          {
+          while ($data = mysqli_fetch_array($result)) 
+          {
+        ?>
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
+              <img src="img/house/<?php echo $data['image']; ?>" style="height:365px;width:100%;" alt="" class="img-d img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
+                    <a href="property-single.php?id=<?php echo $data["id"]; ?>">
+                      <?php echo $data["name"]; ?>
                       <br />
-                      <?php echo $result["address"]; ?>
+                      <?php echo $data["address"]; ?>
                     </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
                     <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
+                      <?php echo $data["price"]; ?>
                     </span>
                   </div>
-                  <a href="property-single.php" class="link-a">Click here to view
+                  <a href="property-single.php?id=<?php echo $data["id"]; ?>" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -255,20 +250,20 @@ $result = mysqli_fetch_assoc($data);
                     <li>
                       <h4 class="card-info-title">Area</h4>
                       <span>
-                        <?php echo $result["area"]; ?>m
+                        <?php echo $data["area"]; ?>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Beds</h4>
                       <span>
-                        <?php echo $result["beds"]; ?>
+                        <?php echo $data["beds"]; ?>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Baths</h4>
                       <span>
-                        <?php echo $result["baths"]; ?>
+                        <?php echo $data["baths"]; ?>
                       </span>
                     </li>
                   </ul>
@@ -277,457 +272,10 @@ $result = mysqli_fetch_assoc($data);
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-      <div class="row" id="222">
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-      </div>
-      <div class="row" id="333">
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/<?php echo $result['photo']; ?>" style="height:465px;width:100%;" alt=""
-                class="img-d img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">
-                      <?php echo $result["name"]; ?>
-                      <br />
-                      <?php echo $result["address"]; ?>
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent |
-                      <?php echo $result["price"]; ?>
-                    </span>
-                  </div>
-                  <a href="property-single.php" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>
-                        <?php echo $result["area"]; ?>m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>
-                        <?php echo $result["beds"]; ?>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>
-                        <?php echo $result["baths"]; ?>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
+        <?php
+          }
+        }
+        ?>
       </div>
 
 
@@ -767,7 +315,6 @@ $result = mysqli_fetch_assoc($data);
 
 
 
-
     <!-- Property list view start -->
     <div class="table-responsive text-nowrap container" id="list">
       <!-- information table start  -->
@@ -782,126 +329,46 @@ $result = mysqli_fetch_assoc($data);
               <th>Price</th>
               <th>Action</th>
             </tr>
-
           </thead>
           <tbody>
-
-
-
+          <?php        
+        $sql = "SELECT * FROM property";
+        $result = $conn->query($sql);
+         if ($result->num_rows > 0)
+          {
+          while ($data = mysqli_fetch_array($result)) 
+          {
+        ?>
             <tr>
               <td>
-                <?php echo $result["Id"]; ?>
+                <?php echo $data["id"]; ?>
               </td>
-              <td>
-                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
-                  class="img-d img-fluid">
-              </td>
-              <td>
-                <?php echo $result["name"]; ?>
-              </td>
-              <td>
-                <?php echo $result["address"]; ?>
-              </td>
-              <td>
-                <?php echo $result["price"]; ?>
-              </td>
-              <td>
-                <a href="property-single.php">
 
+              <td>
+                <img src="img/house/<?php echo $data['image']; ?>" style="height:80px;width:100px;" alt="" class="img-d img-fluid">
+              </td>
+              <td>
+                <?php echo $data["name"]; ?>
+              </td>
+              <td>
+                <?php echo $data["address"]; ?>
+              </td>
+              <td>
+                <?php echo $data["price"]; ?>
+              </td>
+
+            
+              <td>
+                <a href="property-single.php?id=<?php echo $data["id"]; ?>">
                   <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
                 </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
               </td>
+              <?php
+          }
+        }
+        ?> 
             </tr>
-
-
-
-            <tr>
-              <td>
-                <?php echo $result["Id"]; ?>
-              </td>
-              <td>
-                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
-                  class="img-d img-fluid">
-              </td>
-              <td>
-                <?php echo $result["name"]; ?>
-              </td>
-              <td>
-                <?php echo $result["address"]; ?>
-              </td>
-              <td>
-                <?php echo $result["price"]; ?>
-              </td>
-              <td>
-                <a href="property-single.php">
-
-                  <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
-                </a>
-                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
-              </td>
-            </tr>
-
-
-
-            <tr>
-              <td>
-                <?php echo $result["Id"]; ?>
-              </td>
-              <td>
-                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
-                  class="img-d img-fluid">
-              </td>
-              <td>
-                <?php echo $result["name"]; ?>
-              </td>
-              <td>
-                <?php echo $result["address"]; ?>
-              </td>
-              <td>
-                <?php echo $result["price"]; ?>
-              </td>
-              <td>
-                <a href="property-single.php">
-
-                  <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
-                </a>
-                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
-              </td>
-            </tr>
-
-
-
-            <tr>
-              <td>
-                <?php echo $result["Id"]; ?>
-              </td>
-              <td>
-                <img src="img/<?php echo $result['photo']; ?>" style="height:80px;width:100px;" alt=""
-                  class="img-d img-fluid">
-              </td>
-              <td>
-                <?php echo $result["name"]; ?>
-              </td>
-              <td>
-                <?php echo $result["address"]; ?>
-              </td>
-              <td>
-                <?php echo $result["price"]; ?>
-              </td>
-              <td>
-                <a href="property-single.php">
-
-                  <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
-                </a>
-                <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Agent</div>
-              </td>
-            </tr>
-
-
-
-
-
           </tbody>
         </table>
         <hr>
@@ -1106,7 +573,6 @@ $result = mysqli_fetch_assoc($data);
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script>
-
     document.querySelector('.btn2').style.backgroundColor = 'white';
     document.querySelector('.btn2').style.color = 'black';
     document.querySelector('#list').style.display = 'none';
@@ -1125,7 +591,6 @@ $result = mysqli_fetch_assoc($data);
     }
   </script>
   <script>
-
     document.querySelector('.btn2').addEventListener('click', showBtn2);
 
     function showBtn2(b) {

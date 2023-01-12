@@ -414,7 +414,7 @@ require_once 'Connection.php';
         ?>  
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/house/<?php echo $data['image']; ?>" alt="" class="img-a img-fluid">
+              <img src="img/house/<?php echo $data['image']; ?>" alt=""  width="100%" height="365px" >
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
@@ -467,6 +467,10 @@ require_once 'Connection.php';
   </section>
   <!--/ Property End /-->
 
+
+
+  <!-- Best Agents Start  -->
+
   <section class="section-agents section-t8">
     <div class="container">
       <div class="row">
@@ -499,14 +503,13 @@ require_once 'Connection.php';
           <br>
           <div class="card-box-d">
             <div class="card-img-d">
-              <!-- <img src="https://scontent.fktm14-1.fna.fbcdn.net/v/t39.30808-6/279485103_164200242724754_2513128033965447834_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_ohc=P5lnnvqAIKMAX-RO82Q&_nc_ht=scontent.fktm14-1.fna&oh=00_AfCBBSK3OQa-9o9ZxqGraqHIVFvAYxMkVEZnX2AYmqJ3nQ&oe=63C40A7D" alt="" width="100%" height="345px"> -->
               <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px">
             </div>
             <div class="card-overlay card-overlay-hover">
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="profile-public.php" class="link-two">
+                    <a href="profile-public.php?id=<?php echo $data['id'] ?>" class="link-two">
                       <?php echo $data['name']; ?>
                     </a>
                   </h3>
@@ -541,6 +544,9 @@ require_once 'Connection.php';
       </div>
     </div>
   </section>
+
+  <!-- Best Agents End  -->
+
 
 
   <!--/ footer Start /-->
