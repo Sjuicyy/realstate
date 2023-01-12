@@ -44,7 +44,6 @@
     .icon:hover .logout {
       display: block;
     }
-
   </style>
 
   <!-- =======================================================
@@ -55,15 +54,14 @@
   ======================================================= -->
 </head>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
-  nonce="0jwGYLXn"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
 
 
 
 <body>
-<?
-require_once 'Connection.php';
-?>
+  <?
+  require_once 'Connection.php';
+  ?>
 
   <div class="click-closed"></div>
   <!--/ Log in Form  Start /-->
@@ -98,15 +96,13 @@ require_once 'Connection.php';
             <div class="col-md-12 mb-2 mt-3">
               Log in here : <br> <br>
               <div class="form-group">
-                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Email/Phone Number"
-                  name="email">
+                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Email/Phone Number" name="email">
               </div>
             </div>
 
             <div class="col-md-12 mb-2 mt-4">
               <div class="form-group">
-                <input type="password" class="form-control form-control-lg form-control-a" placeholder="Password"
-                  name="password">
+                <input type="password" class="form-control form-control-lg form-control-a" placeholder="Password" name="password">
               </div>
             </div>
 
@@ -133,15 +129,13 @@ require_once 'Connection.php';
               SignUp here: <br><br>
               <div class="form-group">
                 <label for="Type">Full Name</label>
-                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Your Full Name Here"
-                  name="Name">
+                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Your Full Name Here" name="Name">
               </div>
             </div>
             <div class="col-md-12 mb-2">
               <div class="form-group">
                 <label for="Type">Address</label>
-                <input type="text" class="form-control form-control-lg form-control-a"
-                  placeholder="Your Recent Address Here" name="Address">
+                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Your Recent Address Here" name="Address">
               </div>
             </div>
             <div class="col-md-6 mb-2">
@@ -153,15 +147,13 @@ require_once 'Connection.php';
             <div class="col-md-6 mb-2">
               <div class="form-group">
                 <label for="bedrooms">Email</label>
-                <input type="email" class="form-control form-control-lg form-control-a" placeholder="Email Address"
-                  name="Email">
+                <input type="email" class="form-control form-control-lg form-control-a" placeholder="Email Address" name="Email">
               </div>
             </div>
             <div class="col-md-12 mb-2">
               <div class="form-group">
                 <label for="garages">Password</label>
-                <input type="password" class="form-control form-control-lg form-control-a"
-                  placeholder="Please use Strong Password" name="Password">
+                <input type="password" class="form-control form-control-lg form-control-a" placeholder="Please use Strong Password" name="Password">
               </div>
             </div>
             <div class="col-md-12 mb-2">
@@ -174,15 +166,13 @@ require_once 'Connection.php';
             <div class="col-md-6 mb-2">
               <div class="form-group">
                 <label for="price">Profile Image Upload Here</label>
-                <input type="file" class="form-control form-control-lg form-control-a" onchange="readURL(this.files);"
-                  name="Photo">
+                <input type="file" class="form-control form-control-lg form-control-a" onchange="readURL(this.files);" name="Photo">
               </div>
             </div>
             <div class="col-md-6 mb-2">
               <div class="form-group text-center">
                 <label for="price" style="float: left">Profile Image Display Here</label>
-                <img src="img/user.png" id="blah" class="form-control"
-                  style="max-width:180px;width: 100%;height: auto;" />
+                <img src="img/user.png" id="blah" class="form-control" style="max-width:180px;width: 100%;height: auto;" />
               </div>
             </div>
             <div class="col-md-12">
@@ -193,18 +183,16 @@ require_once 'Connection.php';
       </div>
     </div>
   </div>
-      <!-- signup modal end -->
+  <!-- signup modal end -->
   <!-- / Form Search End /-->
 
   <!--/ Nav Start /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
       </button>
       <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
@@ -226,18 +214,15 @@ require_once 'Connection.php';
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
       <div class="icon">
         <a href="./profile.php">
-          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle  float-right"
-            style="width:40px ;height:40px;border-radius:50px">
+          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
         </a>
         <div class="logout text-center">
-          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle"
-            style="width:100px ;height:100px;border-radius:50px">
+          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
           <p class="mt-4 h4"> Pritam SirRR</p>
           <p>PritamDCZar@gmail.com</p>
           <button class="btn btn-b w-100 rounded-4">Log out</button>
@@ -400,68 +385,69 @@ require_once 'Connection.php';
             </div>
           </div>
         </div>
-      </div>
-      <div id="property-carousel" class="owl-carousel owl-theme">
-        <div class="carousel-item-b">
-        <?php        
-        require_once 'Connection.php';
-        $sql = "SELECT * FROM property";
-        $result = $conn->query($sql);
-         if ($result->num_rows > 0)
-          {
-          while ($data = mysqli_fetch_array($result)) 
-          {
-        ?>  
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/house/<?php echo $data['image']; ?>" alt=""  width="100%" height="365px" >
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="property-single.php"><?php echo $data['address']; ?>
-                      <br /> <?php echo $data['name']; ?></a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">sale | Rs. <?php echo $data['price']; ?></span>
+        <div class="row property-grid grid">
+          <?php
+          require_once 'Connection.php';
+          $sql = "SELECT * FROM property";
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+            while ($data = mysqli_fetch_array($result)) {
+          ?>
+              <div class="col-md-4">
+                <div class="card-box-a card-shadow">
+                  <div class="img-box-a">
+
+                  <img src="img/house/<?php echo $data['image']; ?>" alt="" width="100%" height="380px">
+
                   </div>
-                  <a href="#" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span><?php echo $data['area']; ?> m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span><?php echo $data['beds']; ?></span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span><?php echo $data['baths']; ?></span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span><?php echo $data['garage']; ?></span>
-                    </li>
-                  </ul>
+                  <div class="card-overlay">
+                    <div class="card-overlay-a-content">
+                      <div class="card-header-a">
+                        <h2 class="card-title-a">
+                        <a href="property-single.php?id=<?php echo $data['id']; ?>"><?php echo $data['address']; ?>
+                              <br /> <?php echo $data['name']; ?>
+                            </a>
+                        </h2>
+                      </div>
+                      <div class="card-body-a">
+                        <div class="price-box d-flex">
+                        <span class="price-a">sale | Rs. <?php echo $data['price']; ?></span>
+                        </div>
+                        <a href="property-single.php?id=<?php echo $data['id']; ?>" class="link-a">Click here to view
+                          <span class="ion-ios-arrow-forward"></span>
+                        </a>
+                      </div>
+                      <div class="card-footer-a">
+                        <ul class="card-info d-flex justify-content-around">
+                          <li>
+                            <h4 class="card-info-title">Area</h4>
+                            <span><?php echo $data['area']; ?> m
+                              <sup>2</sup>
+                            </span>
+                          </li>
+                          <li>
+                            <h4 class="card-info-title">Beds</h4>
+                            <span><?php echo $data['beds']; ?></span>
+                          </li>
+                          <li>
+                            <h4 class="card-info-title">Baths</h4>
+                            <span><?php echo $data['baths']; ?></span>
+                          </li>
+                          <li>
+                            <h4 class="card-info-title">Garages</h4>
+                            <span><?php echo $data['garage']; ?></span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
           <?php
+            }
           }
-        }
-        ?>
-        </div>  
+          ?>
+        </div>
       </div>
     </div>
   </section>
@@ -490,53 +476,51 @@ require_once 'Connection.php';
 
 
       <div class="row">
-  <?php        
+        <?php
         require_once 'Connection.php';
         $sql = "SELECT * FROM agent";
         $result = $conn->query($sql);
-         if ($result->num_rows > 0)
-          {
-          while ($data = mysqli_fetch_array($result)) 
-          {
-        ?>       
-        <div class="col-md-4">
-          <br>
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="profile-public.php?id=<?php echo $data['id'] ?>" class="link-two">
-                      <?php echo $data['name']; ?>
-                    </a>
-                  </h3>
+        if ($result->num_rows > 0) {
+          while ($data = mysqli_fetch_array($result)) {
+        ?>
+            <div class="col-md-4">
+              <br>
+              <div class="card-box-d">
+                <div class="card-img-d">
+                  <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px" >
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a" align="justify">
-                  <?php echo $data['address']; ?>
-                  <br>
-                  Since :
-                  <?php echo $data['date']; ?>
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong>
-                    <?php echo $data['phone']; ?>
-                  </p>
-                  <p>
-                    <strong>Email: </strong>
-                    <?php echo $data['email']; ?>
-                  </p>
-                </div>
-              </div>
+                <div class="card-overlay card-overlay-hover">
+                  <div class="card-header-d">
+                    <div class="card-title-d align-self-center">
+                      <h3 class="title-d">
+                        <a href="profile-public.php?id=<?php echo $data['id'] ?>" class="link-two">
+                          <?php echo $data['name']; ?>
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="card-body-d">
+                    <p class="content-d color-text-a" align="justify">
+                      <?php echo $data['address']; ?>
+                      <br>
+                      Since :
+                      <?php echo $data['date']; ?>
+                    </p>
+                    <div class="info-agents color-a">
+                      <p>
+                        <strong>Phone: </strong>
+                        <?php echo $data['phone']; ?>
+                      </p>
+                      <p>
+                        <strong>Email: </strong>
+                        <?php echo $data['email']; ?>
+                      </p>
+                    </div>
+                  </div>
 
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
         <?php
           }
         }
@@ -613,11 +597,8 @@ require_once 'Connection.php';
               <h3 class="w-title-a text-brand">Facebook</h3>
             </div>
             <div class="w-body-a">
-              <div class="fb-page" data-href="https://www.facebook.com/floraservices2070" data-tabs="timeline"
-                data-width="" data-height="110" data-small-header="false" data-adapt-container-width="true"
-                data-hide-cover="false" data-show-facepile="false">
-                <blockquote cite="https://www.facebook.com/floraservices2070" class="fb-xfbml-parse-ignore"><a
-                    href="https://www.facebook.com/floraservices2070">Flora Services</a></blockquote>
+              <div class="fb-page" data-href="https://www.facebook.com/floraservices2070" data-tabs="timeline" data-width="" data-height="110" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/floraservices2070" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/floraservices2070">Flora Services</a></blockquote>
               </div>
             </div>
           </div>
@@ -684,7 +665,7 @@ require_once 'Connection.php';
       if (files && files[0]) {
         var reader = new FileReader();
 
-        reader.onload = function (event) {
+        reader.onload = function(event) {
 
           $('#blah')
             .attr('src', event.target.result);
@@ -727,7 +708,6 @@ require_once 'Connection.php';
     }
   </script>
   <script>
-
     document.querySelector('.btn2').addEventListener('click', showBtn2);
 
     function showBtn2(b) {

@@ -160,7 +160,7 @@
     <div class="container">
         <div class="col-md-12 section-t8">
             <div class="title-box-d">
-                <h3 class="title-d">My Properties (6)</h3>
+                <h3 class="title-d">My Properties</h3>
             </div>
         </div>
         <div class="row property-grid grid">
