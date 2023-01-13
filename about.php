@@ -250,126 +250,62 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-5.jpg" alt="" class="img-d img-fluid">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="#" class="link-two">Ishwar  <br>
-                       Ghimire</a>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  Senior Consultant
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +977 9841180938</p>
-                  <p>
-                    <strong>Email: </strong> tamangsagar3132@gmail.com</p>
-                </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="https://www.facebook.com/ishwar.ghimire.94" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-12">
         </div>
-        <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-6.jpg" alt="" class="img-d img-fluid">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="agent-single.php" class="link-two">Sandip
-                      <br> Timalsina</a>
-                  </h3>
+        <?php
+        require_once 'Connection.php';
+        $sql = "SELECT * FROM agent";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          while ($data = mysqli_fetch_array($result)) {
+        ?>
+            <div class="col-md-4">
+              <div class="card-box-d">
+                <div class="card-img-d">
+                  <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px">
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                 Relationship Manager
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +977 9843203912</p>
-                  <p>
-                    <strong>Email: </strong> timalsinasand07@gmail.com</p>
-                </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="https://www.facebook.com/sandip.timalsina.102" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-7.jpg" alt="" class="img-d img-fluid">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="agent-single.php" class="link-two">Sagar
-                      <br> Tamang</a>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                 Marketing Head
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +977 9861952299</p>
-                  <p>
-                    <strong>Email: </strong> agents@example.com</p>
-                </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="https://www.facebook.com/sabin.magar.927" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-
-                  </ul>
+                <div class="card-overlay card-overlay-hover">
+                  <div class="card-header-d">
+                    <div class="card-title-d align-self-center">
+                      <h3 class="title-d">
+                        <a class="link-two">
+                          <?php echo $data['name']; ?>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="card-body-d">
+                    <p class="content-d color-text-a">
+                      <?php echo $data['about']; ?>
+                    </p>
+                    <div class="info-agents color-a">
+                      <p>
+                        <strong>Phone: </strong>
+                        <?php echo $data['phone']; ?>
+                      </p>
+                      <p>
+                        <strong>Email: </strong>
+                        <?php echo $data['email']; ?>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer-d">
+                    <div class="socials-footer d-flex justify-content-center">
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a href="<?php echo $data['facebook']; ?>" class="link-one">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>acebook
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+        <?php
+          }
+        }
+        ?>
       </div>
     </div>
   </section>

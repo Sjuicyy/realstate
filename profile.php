@@ -85,8 +85,6 @@
     <section class="intro-single">
         <div class="container">
             <div class="row">
-                
-
             <?php
             require_once 'Connection.php';
             $sql = "SELECT * FROM agent WHERE id='1' ";
@@ -115,7 +113,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="agent-avatar-box">
-                                <img src="./img/aarju miss.jpg" alt="" class="agent-avatar img-fluid">
+                                <img src="img/Agent/<?php echo $data['image']; ?>" alt="" class="agent-avatar img-fluid">
                             </div>
                         </div>
                         <div class="col-md-5 section-md-t3">
@@ -152,31 +150,13 @@
 
                                     <div class="socials-a">
                                         <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                           
+                                            <li class="list-inline-item mx-5">
+                                                <a href="<?php echo $data['facebook']; ?>">
+                                                    <i class=" fa fa-facebook" aria-hidden="true"></i>acebook
                                                 </a>
                                             </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
+                                           
                                         </ul>
                                     </div>
                                 </div>
@@ -189,10 +169,7 @@
                         </div>
                     </div>
                 </div>
-<?php
-                }
-            }
-            ?>
+
             </div>
 
         </div>
@@ -212,7 +189,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="agent-avatar-box">
-                                <img src="./img/aarju miss.jpg" alt="" class="agent-avatar img-fluid">
+                                <img src="img/Agent/<?php echo $data['image']; ?>" alt="" class="agent-avatar img-fluid">
                             </div>
                         </div>
                         <div class="col-md-5 section-md-t3">
@@ -220,7 +197,7 @@
                                 <div class="agent-title">
                                     <div class="title-box-d">
                                         <div class="title-box-d">
-                                            <h3 class="title-d">Aarju Silwal
+                                            <h3 class="title-d"><?php echo $data['name']; ?>
                                             </h3>
                                         </div>
                                     </div>
@@ -272,7 +249,10 @@
                 </div>
 
             </div>
-
+            <?php
+                }
+            }
+            ?>
     </section>
     <!-- =======Editable Agent Section end ======== -->
 

@@ -43,15 +43,13 @@
   <!--/ Nav Star /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-search" aria-hidden="true"></span>
       </button>
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
@@ -73,8 +71,7 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-search" aria-hidden="true"></span>
       </button>
     </div>
@@ -107,20 +104,6 @@
     <!--/ Agents Grid Star /-->
     <div class="container" id="grid">
       <div class="row">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="col-md-12">
         </div>
         <?php
@@ -130,53 +113,53 @@
         if ($result->num_rows > 0) {
           while ($data = mysqli_fetch_array($result)) {
         ?>
-        <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px">
+            <div class="col-md-4">
+              <div class="card-box-d">
+                <div class="card-img-d">
+                  <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px">
+                </div>
+                <div class="card-overlay card-overlay-hover">
+                  <div class="card-header-d">
+                    <div class="card-title-d align-self-center">
+                      <h3 class="title-d">
+                        <a href="profile-public.php?id=<?php echo $data['id'] ?>" class="link-two">
+                          <?php echo $data['name']; ?>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="card-body-d">
+                    <p class="content-d color-text-a">
+                      <?php echo $data['about']; ?>
+                    </p>
+                    <div class="info-agents color-a">
+                      <p>
+                        <strong>Phone: </strong>
+                        <?php echo $data['phone']; ?>
+                      </p>
+                      <p>
+                        <strong>Email: </strong>
+                        <?php echo $data['email']; ?>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer-d">
+                    <div class="socials-footer d-flex justify-content-center">
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a href="<?php echo $data['facebook']; ?>" class="link-one">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>acebook
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="profile-public.php?id=<?php echo $data['id']?>" class="link-two">
-                      <?php echo $data['name']; ?>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  <?php echo $data['about']; ?>
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong>
-                    <?php echo $data['phone']; ?>
-                  </p>
-                  <p>
-                    <strong>Email: </strong>
-                    <?php echo $data['email']; ?>
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="<?php echo $data['facebook']; ?>" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>acebook
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-<?php
+        <?php
           }
         }
-      ?>
+        ?>
       </div>
       <div class="row">
         <div class="col-sm-12">
@@ -197,7 +180,7 @@
                 <a class="page-link" href="#">3</a>
               </li>
               <li class="page-item next">
-    
+
                 <a class="page-link" href="#">
                   <span class="ion-ios-arrow-forward"></span>
                 </a>
@@ -220,7 +203,7 @@
       <!-- information table start  -->
       <div>
         <table class="table">
-       
+
           <thead>
             <tr>
               <th>ID</th>
@@ -230,13 +213,13 @@
               <th>Since</th>
               <th>Action</th>
             </tr>
- <?php
-        require_once 'Connection.php';
-        $sql = "SELECT * FROM agent";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-          while ($data = mysqli_fetch_array($result)) {
-        ?>
+            <?php
+            require_once 'Connection.php';
+            $sql = "SELECT * FROM agent";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+              while ($data = mysqli_fetch_array($result)) {
+            ?>
           </thead>
           <tbody>
             <tr>
@@ -262,10 +245,10 @@
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>
               </td>
             </tr>
-            <?php
-             }
-           }
-         ?>
+        <?php
+              }
+            }
+        ?>
           </tbody>
 
         </table>
