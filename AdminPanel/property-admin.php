@@ -35,51 +35,47 @@
   ======================================================= -->
 </head>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
-    nonce="0jwGYLXn"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
 
 <body>
     <!-- / Form Search End /-->
 
     <!--/ Nav Star /-->
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-    <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
-        <span class="fa fa-user-plus" aria-hidden="true"></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="property-grid.php">Property</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="agents-grid.php">Agents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
-        <span class="fa fa-user-plus" aria-hidden="true"></span>
-      </button>
-    </div>
-  </nav>
+        <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
+            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+                <span class="fa fa-user-plus" aria-hidden="true"></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="property-grid.php">Property</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agents-grid.php">Agents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+                <span class="fa fa-user-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
     <!--/ Nav End /-->
 
 
@@ -104,7 +100,7 @@
                     <table class="table">
 
 
-                
+
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -118,54 +114,53 @@
                         </thead>
                         <tbody>
 
-                        <?php
-            require_once 'Connection.php';
-            $sql = "SELECT * FROM property where agent_id='1' ";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($data = mysqli_fetch_array($result)) {
-            ?>
+                            <?php
+                            require_once 'Connection.php';
+                            $sql = "SELECT * FROM property where agent_id='1' ";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($data = mysqli_fetch_array($result)) {
+                            ?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $data['id'] ?>
+                                        </td>
+                                        <td>
+                                            <img src="img/house/<?php echo $data['image'] ?>" alt="" height="80px" width="100px">
+                                        </td>
+                                        <td>
+                                            <?php echo $data['name'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['address'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['price'] ?>
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" style="accent-color: green;" type="radio" name="1" id="11" checked value="1">
+                                                <label class="form-check-label" for="11">
+                                                    Available
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" style="accent-color: red;" type="radio" name="1" id="12" value="0">
+                                                <label class="form-check-label" for="12">
+                                                    sold
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="btn-sm btn-success text-center" style="width: 80px;">Edit</div>
+                                            <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Update</div>
+                                        </td>
+                                    </tr>
 
-
-                            <tr>
-                                <td>
-                                <?php echo $data['id'] ?>
-                                </td>
-                                <td>
-                                    <img src="img/house/<?php echo $data['image'] ?>" alt="" height="80px" width="100px">
-                                </td>
-                                <td>
-                                    <?php echo $data['name'] ?>
-                                </td>
-                                <td>
-                                <?php echo $data['address'] ?>
-                                </td>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: green;" type="radio"
-                                            name="1" id="11" checked value="1">
-                                        <label class="form-check-label" for="11">
-                                            Available
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" style="accent-color: red;" type="radio" name="1"
-                                            id="12" value="0">
-                                        <label class="form-check-label" for="12">
-                                            sold
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="btn-sm btn-success text-center" style="width: 80px;">Edit</div>
-                                    <div class="btn-sm btn-success text-center mt-1" style="width: 80px;">Update</div>
-                                </td>
-                            </tr>
-                            
-           <?php
-                }
-            }
-?>
+                            <?php
+                                }
+                            }
+                            ?>
 
 
                         </tbody>
@@ -262,13 +257,8 @@
                                     <h3 class="w-title-a text-brand">Facebook</h3>
                                 </div>
                                 <div class="w-body-a">
-                                    <div class="fb-page" data-href="https://www.facebook.com/floraservices2070"
-                                        data-tabs="timeline" data-width="" data-height="110" data-small-header="false"
-                                        data-adapt-container-width="true" data-hide-cover="false"
-                                        data-show-facepile="false">
-                                        <blockquote cite="https://www.facebook.com/floraservices2070"
-                                            class="fb-xfbml-parse-ignore"><a
-                                                href="https://www.facebook.com/floraservices2070">Flora Services</a>
+                                    <div class="fb-page" data-href="https://www.facebook.com/floraservices2070" data-tabs="timeline" data-width="" data-height="110" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                                        <blockquote cite="https://www.facebook.com/floraservices2070" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/floraservices2070">Flora Services</a>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -336,7 +326,7 @@
                     if (input.files && input.files[0]) {
                         var reader = new FileReader();
 
-                        reader.onload = function (e) {
+                        reader.onload = function(e) {
                             $('#blah')
                                 .attr('src', e.target.result);
                         };

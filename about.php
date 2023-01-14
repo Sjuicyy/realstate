@@ -139,7 +139,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
+      <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
@@ -163,10 +163,10 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+      <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
-        <span class="fa fa-user-plus" aria-hidden="true"></span>
-      </button>
+        <span class="fa fa-user-plus1" aria-hidden="true"></span> -->
+      <!-- </button> -->
     </div>
   </nav>
   <!--/ Nav End /-->

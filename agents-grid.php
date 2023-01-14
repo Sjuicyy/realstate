@@ -48,7 +48,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
+      <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-search" aria-hidden="true"></span>
       </button>

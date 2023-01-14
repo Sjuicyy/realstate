@@ -191,7 +191,7 @@
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
       </button>
-      <a class="navbar-brand text-brand" href="all-links.php">Fiona<span class="color-b"> Services</span></a>
+      <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
@@ -217,17 +217,35 @@
       <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
+
+      <!-- admin profile icon  -->
+
       <div class="icon">
-        <a href="./profile.php">
-          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
-        </a>
-        <div class="logout text-center">
-          <img src="img/Agent/11.jpg" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
-          <p class="mt-4 h4"> Pritam SirRR</p>
-          <p>PritamDCZar@gmail.com</p>
-          <button class="btn btn-b w-100 rounded-4">Log out</button>
-        </div>
+
+
+
+        <?php
+        require_once 'Connection.php';
+        $sql = "SELECT * FROM agent where id='3'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          while ($data = mysqli_fetch_array($result)) {
+        ?>
+            <a href="./profile-public.php?id=3">
+              <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
+            </a>
+            <div class="logout text-center">
+              <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
+              <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
+              <p><?php echo $data['email'] ?></p>
+              <button class="btn btn-b w-100 rounded-4">Log out</button>
+            </div>
       </div>
+      <!-- admin profile icon  end -->
+  <?php
+          }
+        }
+  ?>
     </div>
   </nav>
   <!--/ Nav End /-->
@@ -397,21 +415,21 @@
                 <div class="card-box-a card-shadow">
                   <div class="img-box-a">
 
-                  <img src="img/house/<?php echo $data['image']; ?>" alt="" width="100%" height="380px">
+                    <img src="img/house/<?php echo $data['image']; ?>" alt="" width="100%" height="380px">
 
                   </div>
                   <div class="card-overlay">
                     <div class="card-overlay-a-content">
                       <div class="card-header-a">
                         <h2 class="card-title-a">
-                        <a href="property-single.php?id=<?php echo $data['id']; ?>"><?php echo $data['address']; ?>
-                              <br /> <?php echo $data['name']; ?>
-                            </a>
+                          <a href="property-single.php?id=<?php echo $data['id']; ?>"><?php echo $data['address']; ?>
+                            <br /> <?php echo $data['name']; ?>
+                          </a>
                         </h2>
                       </div>
                       <div class="card-body-a">
                         <div class="price-box d-flex">
-                        <span class="price-a">sale | Rs. <?php echo $data['price']; ?></span>
+                          <span class="price-a">sale | Rs. <?php echo $data['price']; ?></span>
                         </div>
                         <a href="property-single.php?id=<?php echo $data['id']; ?>" class="link-a">Click here to view
                           <span class="ion-ios-arrow-forward"></span>
@@ -487,7 +505,7 @@
               <br>
               <div class="card-box-d">
                 <div class="card-img-d">
-                  <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px" >
+                  <img src="img/Agent/<?php echo $data['image']; ?>" alt="" width="100%" height="345px">
                 </div>
                 <div class="card-overlay card-overlay-hover">
                   <div class="card-header-d">
