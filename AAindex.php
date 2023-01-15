@@ -79,13 +79,13 @@ $login_id = $_SESSION['id']
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AAAdd-property.php">Add Property</a>
+                        <a class="nav-link" href="AAdd-property.php">Add Property</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AAAlocation.php">Location</a>
+                        <a class="nav-link" href="AAlocation.php">Location</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AAAtestimonial.php">Testimonial</a>
+                        <a class="nav-link" href="AAtestimonial.php">Testimonial</a>
                     </li>
                 </ul>
             </div>
@@ -97,7 +97,7 @@ $login_id = $_SESSION['id']
                 if ($result->num_rows > 0) {
                     while ($data = mysqli_fetch_array($result)) {
                 ?>
-                        <a href="./AAAprofile.php?id=<?php echo $login_id ?>">
+                        <a href="./AAprofile.php?id=<?php echo $login_id ?>">
                             <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
                         </a>
                         <div class="logout text-center">
@@ -122,7 +122,7 @@ $login_id = $_SESSION['id']
             <div class="table-responsive  text-nowrap">
                 <!-- information table start  -->
                 <div>
-                    <a href="./AAAdd-Property.php">
+                    <a href="./AAdd-property.php">
                         <div class="btn float-right btn-success mb-3">+Add Property</div>
                     </a>
                     <table class="table">

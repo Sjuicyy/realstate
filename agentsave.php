@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     $address= $_POST['address'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
-    $password = 'aaa';
+    $pswd = $_POST['password'];
     $about = $_POST['about'];
     $date=date("Y-m-d");
     $image='profile11.jpg';
@@ -12,11 +12,11 @@ if (isset($_POST['submit'])) {
     // $target2 = "img/Agent/" . basename($I);
     require_once 'Connection.php';
     $sql = "INSERT INTO `agent` (`id`, `name`, `email`, `phone`, `address`, `password`, `image`, `about`, `area`, `facebook`, `otp`, `date`, `status`) 
-                            VALUES (NULL, '$name', '$email', '$phone', '$address', '$password', '$image', '$about', NULL, NULL, NULL, '$date', NULL)";
+                            VALUES (NULL, '$name', '$email', '$phone', '$address', '$pswd', '$image', '$about', NULL, NULL, NULL, '$date', NULL)";
   mysqli_query($conn,$sql);
     // if (move_uploaded_file($_FILES['photo']['tmp_name'], $target2))  {
     //     echo "<script>alert('Successfully Submitted !');</script>";
-    //       header('Location: form.php');
+          header('Location: form.php');
     // } else {
     //     echo "<script>alert('Something went wrong! Please Retry');</script>";
     //       echo"<script>window.location='form.php'</script>";

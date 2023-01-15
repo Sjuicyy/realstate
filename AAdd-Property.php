@@ -28,6 +28,24 @@ $login_id = $_SESSION['id']
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    .logout {
+        display: none;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        margin-left: -200px;
+        margin-top: 40px;
+        background-color: #2eca6ad5;
+        padding: 5px;
+        border: 2px solid #2ECA69;
+        border-radius: 6px;
+        width: 300px;
+    }
+
+    .icon:hover .logout {
+        display: block;
+    }
+</style>
   <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
@@ -69,16 +87,38 @@ $login_id = $_SESSION['id']
             <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="AAAdd-property.php">Add Property</a>
+            <a class="nav-link" href="AAdd-property.php">Add Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="AAAlocation.php">Location</a>
+            <a class="nav-link" href="AAlocation.php">Location</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="AAAtestimonial.php">Testimonial</a>
+            <a class="nav-link" href="AAtestimonial.php">Testimonial</a>
           </li>
         </ul>
       </div>
+      <div class="icon">
+                <?php
+                require_once 'Connection.php';
+                $sql = "SELECT * FROM agent where id=$login_id";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($data = mysqli_fetch_array($result)) {
+                ?>
+                        <a href="./AAprofile.php?id=<?php echo $login_id ?>">
+                            <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
+                        </a>
+                        <div class="logout text-center">
+                            <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
+                            <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
+                            <p><?php echo $data['email'] ?></p>
+                            <button class="btn btn-b w-100 rounded-4">Log out</button>
+                        </div>
+                <?php
+                    }
+                }
+                ?>
+            </div>
       <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button> -->

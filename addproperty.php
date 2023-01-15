@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 
     // if  (move_uploaded_file($_FILES['Photo']['tmp_name'], $target2)) {
     //     echo"<script>alert('New Agent Added !');</script>";
-        header("Location:AAAindex.php");
+        header("Location:AAindex.php");
     // }
     // else {
     //     echo"<script>alert('Something went wrong! Please Retry');</script>";

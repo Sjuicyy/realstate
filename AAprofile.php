@@ -34,6 +34,24 @@ $login_id = $_SESSION['id']
 
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .logout {
+            display: none;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            margin-left: -200px;
+            margin-top: 40px;
+            background-color: #2eca6ad5;
+            padding: 5px;
+            border: 2px solid #2ECA69;
+            border-radius: 6px;
+            width: 300px;
+        }
+
+        .icon:hover .logout {
+            display: block;
+        }
+    </style>
 
     <!-- =======================================================
     Theme Name: EstateAgency
@@ -66,22 +84,43 @@ $login_id = $_SESSION['id']
                         <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="property-grid.php">Property</a>
+                        <a class="nav-link" href="AAdd-property.php">Add Property</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="agents-grid.php">Agents</a>
+                        <a class="nav-link" href="AAlocation.php">Location</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
+                        <a class="nav-link" href="AAtestimonial.php">Testimonial</a>
                     </li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
-                <span class="fa fa-user-plus" aria-hidden="true"></span>
-            </button>
+            <div class="icon">
+                <?php
+                require_once 'Connection.php';
+                $sql = "SELECT * FROM agent where id=$login_id";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($data = mysqli_fetch_array($result)) {
+                ?>
+                        <a href="./AAprofile.php?id=<?php echo $login_id ?>">
+                            <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
+                        </a>
+                        <div class="logout text-center">
+                            <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
+                            <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
+                            <p><?php echo $data['email'] ?></p>
+                            <a href="index.php">
+                                <button class="btn btn-b w-100 rounded-4">Log out</button>
+                            </a>
+                        </div>
+                <?php
+                    }
+                }
+                ?>
+            </div>
+            <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+        <span class="fa fa-user-plus" aria-hidden="true"></span>
+      </button> -->
         </div>
     </nav>
     <!--/ Nav End /-->
@@ -205,214 +244,54 @@ $login_id = $_SESSION['id']
                                             </h3>
                                         </div>
                                     </div>
-                                    <div class="agent-content mb-3">
+                                    <form action='agentedit.php' method='POST' class="agent-content mb-3">
 
                                         <div class="info-agents color-a">
                                             <p>
                                                 <strong>Mobile: </strong>
-                                                <input class="form form-control" type="text" readonly>
+                                                <input class="form form-control" type="text" value="<?php echo $data['phone'] ?>" name='phone' readonly>
                                             </p>
                                             <p>
                                                 <strong>Email: </strong>
-                                                <input class=" form form-control" type="text" readonly>
+                                                <input class=" form form-control" type="text" value="<?php echo $data['email'] ?>" name='email' readonly>
                                             </p>
                                             <p>
                                                 <strong>Facebook: </strong>
-                                                <input class=" form form-control" type="text">
+                                                <input class=" form form-control" type="text" value="<?php echo $data['facebook'] ?>" name='facebook'>
                                             </p>
                                             <p>
                                                 <strong>About: </strong>
-                                                <input class="form form-control" type="text">
+                                                <input class="form form-control" type="text" value="<?php echo $data['about'] ?>" name='about'>
                                             </p>
                                             <p>
                                                 <strong>Password: </strong>
-                                                <input class=" form form-control" type="text" placeholder="Enter new password">
-                                                <input class=" form form-control mt-1" type="text" placeholder="Re-enter password">
+                                                <input class=" form form-control" type="text" placeholder="Enter new password" name="pswd">
+                                                <!-- <input class=" form form-control mt-1" type="text" placeholder="Re-enter password"> -->
                                             </p>
+                                            <input type="submit" class="btn btn-sm w-100 mt-2 btn-success">
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <a href="profile.php">
-                                                <div class="btn btn-sm w-75 btn-success">Save</div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <a href="profile.php">
-                                                <div class="btn btn-sm w-75 btn-danger">Cancel</div>
-                                            </a>
-                                        </div>
+                                    </form>
+                                        <a href="">
+                                            <button  class="btn btn-sm w-100 btn-danger">Cancel</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-    <?php
+        </div>
+<?php
                     }
                 }
-    ?>
+?>
     </section>
     <!-- =======Editable Agent Section end ======== -->
 
-    <!--/ footer 1 Star /-->
-    <section class="section-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-4">
-                    <div class="widget-a">
-                        <div class="w-header-a">
-                            <h3 class="w-title-a text-brand">Fiona Services</h3>
-                        </div>
-                        <div class="w-body-a">
-                            <p class="w-text-a color-text-a" align="justify">
-                                तपाई ललितपुर जिल्लामा घर बनाएर बस्नको लागि उपयुक्त जग्गाको खोजिमा
-                                हुनुहुन्छ भने
-                                हामिलाइ सम्झनुहोला ।
-                                हामिसंग प्लटिङमा र अन्य क्षेत्रका घर बनाएर बस्न वाताबरणिय हिसाबले अति
-                                उपयुक्त
-                                टुक्रा जग्गा बिक्रिमा छ
-                                ।
-                            </p>
-                        </div>
-                        <div class="w-footer-a">
-                            <ul class="list-unstyled">
-                                <li class="color-a">
-                                    <span class="color-text-a">Phone .</span> fionaservices@gmail.com
-                                </li>
-                                <li class="color-a">
-                                    <span class="color-text-a">Email .</span> +977 015522725
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 section-md-t3">
-                    <div class="widget-a">
-                        <div class="w-header-a">
-                            <h3 class="w-title-a text-brand">The Company</h3>
-                        </div>
-                        <div class="w-body-a">
-                            <div class="w-body-a">
-                                <ul class="list-unstyled">
-                                    <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Admin Login</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Agent Login</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Agent Signup</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">View
-                                            Properties</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Agent List</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">About Fiona
-                                            Services</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 section-md-t3">
-                    <div class="widget-a">
-                        <div class="w-header-a">
-                            <h3 class="w-title-a text-brand">Facebook</h3>
-                        </div>
-                        <div class="w-body-a">
-                            <div class="fb-page" data-href="https://www.facebook.com/floraservices2070" data-tabs="timeline" data-width="" data-height="110" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-                                <blockquote cite="https://www.facebook.com/floraservices2070" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/floraservices2070">Flora
-                                        Services</a>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
 
-    <!--/ Footer 2 End /-->
-
-
-    <!-- footer 2 start -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="socials-a">
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="copyright-footer">
-                        <p class="copyright color-text-a">
-                            &copy; Copyright
-                            <span class="color-a">Fiona Services</span> All Rights Reserved.
-                        </p>
-                    </div>
-                    <div class="credits">
-
-                        Designed by <a href="https://pritambajagain.com.np/">D Czar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--/ Footer 2 End /-->
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <div id="preloader"></div>
-
-    <!-- JavaScript Libraries -->
-    <script>
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function(e) {
-                    $('#blah')
-                        .attr('src', e.target.result);
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
+  
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/popper/popper.min.js"></script>

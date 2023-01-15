@@ -125,7 +125,7 @@
             </div>
             <div class="col-md-12 mb-2">
               <div class="form-group">
-                <label for="garages">Password</label>
+                <label for=" ">Password</label>
                 <input type="text" class="form-control form-control-lg form-control-a" placeholder="Please use Strong Password" name="password">
               </div>
             </div>
