@@ -22,7 +22,6 @@ if (isset($_POST['submit'])) {
     $image='sale11.jpg';
     $status='available';
     $date=date("Y-m-d");
-    // $E=$_POST['baths'];
     // $I=$_FILES['Photo']['name'];
     // $target2 = "../assets/img/agent/".basename($I);
     // $J = $_POST['Date'];

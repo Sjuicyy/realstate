@@ -102,44 +102,44 @@
               SignUp here: <br><br>
               <div class="form-group">
                 <label for="Type">Full Name</label>
-                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Your Full Name Here" name="Name">
-              </div>
-            </div>
-            <div class="col-md-12 mb-2">
-              <div class="form-group">
-                <label for="Type">Address</label>
-                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Your Recent Address Here" name="Address">
+                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Your Full Name Here" name="name">
               </div>
             </div>
             <div class="col-md-6 mb-2">
               <div class="form-group">
                 <label for="city">Phone Number</label>
-                <input type="number" class="form-control form-control-lg form-control-a" name="Phone">
+                <input type="number" class="form-control form-control-lg form-control-a" name="phone">
               </div>
             </div>
             <div class="col-md-6 mb-2">
               <div class="form-group">
                 <label for="bedrooms">Email</label>
-                <input type="email" class="form-control form-control-lg form-control-a" placeholder="Email Address" name="Email">
+                <input type="email" class="form-control form-control-lg form-control-a" placeholder="Email Address" name="email">
+              </div>
+            </div>
+            <div class="col-md-12 mb-2">
+              <div class="form-group">
+                <label for="Type">Address</label>
+                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Your Recent Address Here" name="address">
               </div>
             </div>
             <div class="col-md-12 mb-2">
               <div class="form-group">
                 <label for="garages">Password</label>
-                <input type="password" class="form-control form-control-lg form-control-a" placeholder="Please use Strong Password" name="Password">
+                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Please use Strong Password" name="password">
               </div>
             </div>
             <div class="col-md-12 mb-2">
               <div class="form-group">
                 <label for="bathrooms">About You</label>
-                <textarea class="form-control form-control-lg form-control-a" id="bathrooms" name="Detail">
+                <textarea class="form-control form-control-lg form-control-a" id="bathrooms" name="about">
               </textarea>
               </div>
             </div>
             <div class="col-md-6 mb-2">
               <div class="form-group">
                 <label for="price">Profile Image Upload Here</label>
-                <input type="file" class="form-control form-control-lg form-control-a" onchange="readURL(this.files);" name="Photo">
+                <input type="file" class="form-control form-control-lg form-control-a" onchange="readURL(this.files);" name="photo">
               </div>
             </div>
             <div class="col-md-6 mb-2">
