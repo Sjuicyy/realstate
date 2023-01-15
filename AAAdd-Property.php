@@ -88,6 +88,7 @@ $login_id = $_SESSION['id']
   <div class="container" style="margin-top:130px;">
     <div class="title-box-d">
       <h3 class="title-d margin-auto">Add Property Detail</h3>
+
     </div>
     <form class="form-a" action="addproperty.php" method="POST" enctype="multipart/form-data">
       <div class="row">

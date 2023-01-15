@@ -7,13 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = mysqli_query($conn, $sql);
     $result = mysqli_num_rows($data);
     $result0 = mysqli_fetch_array($data);
-    $login_id = $result0['id'];
+    $login_id1 = $result0['id'];
 
     if ($result == 1) {
         session_start();
         $_SESSION['User'] = $_POST['email'];
         $_SESSION['status'] = 'logedin';
-        $_SESSION['id']= $login_id;
+        $_SESSION['id']= $login_id1;
         echo "login successful";
         header('location:AAAindex.php');
     } else {
