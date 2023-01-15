@@ -89,36 +89,36 @@ $login_id = $_SESSION['id']
     <div class="title-box-d">
       <h3 class="title-d margin-auto">Add Property Detail</h3>
     </div>
-    <form class="form-a" action="agentsave.php" method="POST" enctype="multipart/form-data">
+    <form class="form-a" action="addproperty.php" method="POST" enctype="multipart/form-data">
       <div class="row">
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="city">Property Name</label>
-            <input type="text" class="form-control form-control-lg form-control-a" name="Phone">
+            <input type="text" class="form-control form-control-lg form-control-a" name="name">
           </div>
         </div>
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="bedrooms">Address</label>
-            <input type="text" class="form-control form-control-lg form-control-a" name="Address">
+            <input type="text" class="form-control form-control-lg form-control-a" name="address">
           </div>
         </div>
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="city">Area</label>
-            <input type="number" class="form-control form-control-lg form-control-a" name="Phone">
+            <input type="number" class="form-control form-control-lg form-control-a" name="area">
           </div>
         </div>
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="city">Price</label>
-            <input type="number" class="form-control form-control-lg form-control-a" name="Phone">
+            <input type="number" class="form-control form-control-lg form-control-a" name="price">
           </div>
         </div>
         <div class="col-md-6 ">
           <div class="form-group ">
             <label for="city">Type</label>
-            <select class="form-control form-select form-control-a" id="city">
+            <select class="form-control form-select form-control-a" id="city" name="type">
               <option>House</option>
               <option>Land</option>
               <option>House and Land</option>
@@ -128,25 +128,25 @@ $login_id = $_SESSION['id']
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="bedrooms">Valid Until (in days)</label>
-            <input type="text" class="form-control form-control-lg form-control-a" name="Email">
+            <input type="text" class="form-control form-control-lg form-control-a" name="valid_time">
           </div>
         </div>
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="bedrooms">Bedrooms</label>
-            <input type="number" class="form-control form-control-lg form-control-a" name="Email">
+            <input type="number" class="form-control form-control-lg form-control-a" name="beds">
           </div>
         </div>
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="city">Bathrooms</label>
-            <input type="number" class="form-control form-control-lg form-control-a" name="Phone">
+            <input type="number" class="form-control form-control-lg form-control-a" name="baths">
           </div>
         </div>
         <div class="col-md-12 mb-2">
           <div class="form-group">
             <label for="bathrooms">Description</label>
-            <textarea class="form-control form-control-lg form-control-a" id="bathrooms" name="Detail">
+            <textarea class="form-control form-control-lg form-control-a" id="bathrooms" name="description">
               </textarea>
           </div>
         </div>
