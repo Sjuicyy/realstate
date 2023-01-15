@@ -1,14 +1,19 @@
 <?php
 if (isset($_POST['submit'])) {
     require_once 'Connection.php';
-    $A=$_POST['Type'];
-    $B=$_POST['Name'];
-    $C=$_POST['Email'];
-    $D=$_POST['Contact'];
-    $E=$_POST['Address'];
-    $I=$_FILES['Photo']['name'];
-    $target2 = "../assets/img/agent/".basename($I);
-    $J = $_POST['Date'];
+    $A=$_POST['name'];
+    $B=$_POST['address'];
+    $C=$_POST['area'];
+    $D=$_POST['price'];
+    $E=$_POST['type'];
+    $E=$_POST['valid'];
+    $E=$_POST['beds'];
+    $E=$_POST['baths'];
+    $E=$_POST['description'];
+    // $E=$_POST['baths'];
+    // $I=$_FILES['Photo']['name'];
+    // $target2 = "../assets/img/agent/".basename($I);
+    // $J = $_POST['Date'];
     $sql="INSERT INTO agent(Type,Name,Email,Contact,Address,Photo,Password,Date) VALUES ('$A','$B','$C','$D','$E','$I','$D','$J')";
     mysqli_query($conn,$sql);
     if  (move_uploaded_file($_FILES['Photo']['tmp_name'], $target2)) {

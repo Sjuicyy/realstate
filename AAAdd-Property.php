@@ -128,7 +128,7 @@ $login_id = $_SESSION['id']
         <div class="col-md-6 mb-2">
           <div class="form-group">
             <label for="bedrooms">Valid Until (in days)</label>
-            <input type="text" class="form-control form-control-lg form-control-a" name="valid_time">
+            <input type="text" class="form-control form-control-lg form-control-a" name="valid">
           </div>
         </div>
         <div class="col-md-6 mb-2">
