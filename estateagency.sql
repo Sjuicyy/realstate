@@ -72,6 +72,7 @@ INSERT INTO `property` (`id`, `agent_id`, `name`, `address`, `area`, `price`, `t
 (1, '1', 'Happy House', 'Lagankhel', '550', '1,15,00,000', 'House', '60', '9', '4', 'Good house for both family and family use', NULL, 'sale2.jpg', NULL, NULL, 'available', NULL, '2023-01-04'),
 (2, '1', 'house', 'kathmandu', 'kathmandu', '1,90,00,000', 'house', '60', '8', '3', 'nice house', NULL, 'sale2.jpg', NULL, NULL, 'available', NULL, '2023-01-02');
 --
+
 -- Indexes for dumped tables
 --
 --
