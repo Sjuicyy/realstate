@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 --
 -- Table structure for table `agent`
+
 --
 CREATE TABLE `agent` (
   `id` int(11) NOT NULL,
