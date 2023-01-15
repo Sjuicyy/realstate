@@ -7,26 +7,20 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
   <style>
     .logout {
       display: none;
@@ -45,7 +39,6 @@
       display: block;
     }
   </style>
-
   <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
@@ -56,24 +49,19 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
 
-
-
 <body>
   <?
   require_once 'Connection.php';
   ?>
-
   <div class="click-closed"></div>
   <!--/ Log in Form  Start /-->
   <div class="box-collapse">
     <div class="title-box-d">
       <h3 class="title-d">Welcome to Agent Space</h3>
-
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
       <div class="row">
-
         <div class="col">
           <button type="submit" class="btn btn-b w-100 btn1">Login</button>
           </a>
@@ -82,14 +70,9 @@
           <button type="submit" class="btn btn-a w-100 btn2">SignUp</button>
           </a>
         </div>
-
-
       </div>
       <hr>
-
-
       <!-- login modal start -->
-
       <div id="modal1">
         <form class="form-a" action="loginauth.php" method="POST" enctype="multipart/form-data">
           <div class="row">
@@ -99,29 +82,19 @@
                 <input type="text" class="form-control form-control-lg form-control-a" placeholder="Email/Phone Number" name="email">
               </div>
             </div>
-
             <div class="col-md-12 mb-2 mt-4">
               <div class="form-group">
                 <input type="password" class="form-control form-control-lg form-control-a" placeholder="Password" name="password">
               </div>
             </div>
-
             <div class="col-md-12 mt-4">
               <button type="submit" name="submit" class="btn btn-b" style="width: 100%;">Log In</button>
             </div>
-
           </div>
         </form>
       </div>
-
-
       <!-- login modal end -->
-
-
-
       <!-- signup modal start -->
-
-
       <div id="modal2">
         <form class="form-a" action="agentsave.php" method="POST" enctype="multipart/form-data">
           <div class="row">
@@ -185,7 +158,6 @@
   </div>
   <!-- signup modal end -->
   <!-- / Form Search End /-->
-
   <!--/ Nav Start /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
@@ -217,42 +189,33 @@
       <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
-
       <!-- admin profile icon  -->
-
-      <div class="icon">
-
-
-
-        <?php
+      <!-- <div class="icon">
+        < ?php
         require_once 'Connection.php';
         $sql = "SELECT * FROM agent where id='3'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
           while ($data = mysqli_fetch_array($result)) {
         ?>
-            <a href="./profile-public.php?id=3">
-              <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
+            <a href="./agent-single.php?id=3">
+              <img src="img/Agent/< ?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
             </a>
             <div class="logout text-center">
-              <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
-              <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
-              <p><?php echo $data['email'] ?></p>
+              <img src="img/Agent/< ?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
+              <p class="mt-4 h4"> < ?php echo $data['name'] ?></p>
+              <p>< ?php echo $data['email'] ?></p>
               <button class="btn btn-b w-100 rounded-4">Log out</button>
             </div>
-      </div>
-      <!-- admin profile icon  end -->
-  <?php
+        < ?php
           }
         }
-  ?>
+        ?>
+      </div> -->
+      <!-- admin profile icon  end -->
     </div>
   </nav>
   <!--/ Nav End /-->
-
-
-
-
   <!--/ Carousel Start /-->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
@@ -295,9 +258,6 @@
     </div>
   </div>
   <!--/ Carousel end /-->
-
-
-
   <!--/ Services Start /-->
   <section class="section-services section-t8">
     <div class="container">
@@ -382,12 +342,7 @@
     </div>
   </section>
   <!--/ Services End /-->
-
-
-
-
   <!--/ Property Start /-->
-
   <section class="section-property section-t8">
     <div class="container">
       <div class="row">
@@ -414,9 +369,7 @@
               <div class="col-md-4">
                 <div class="card-box-a card-shadow">
                   <div class="img-box-a">
-
                     <img src="img/house/<?php echo $data['image']; ?>" alt="" width="100%" height="380px">
-
                   </div>
                   <div class="card-overlay">
                     <div class="card-overlay-a-content">
@@ -470,11 +423,7 @@
     </div>
   </section>
   <!--/ Property End /-->
-
-
-
   <!-- Best Agents Start  -->
-
   <section class="section-agents section-t8">
     <div class="container">
       <div class="row">
@@ -491,8 +440,6 @@
           </div>
         </div>
       </div>
-
-
       <div class="row">
         <?php
         require_once 'Connection.php';
@@ -511,7 +458,7 @@
                   <div class="card-header-d">
                     <div class="card-title-d align-self-center">
                       <h3 class="title-d">
-                        <a href="profile-public.php?id=<?php echo $data['id'] ?>" class="link-two">
+                        <a href="agent-single.php?id=<?php echo $data['id'] ?>" class="link-two">
                           <?php echo $data['name']; ?>
                         </a>
                       </h3>
@@ -535,7 +482,6 @@
                       </p>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -546,11 +492,7 @@
       </div>
     </div>
   </section>
-
   <!-- Best Agents End  -->
-
-
-
   <!--/ footer Start /-->
   <section class="section-footer">
     <div class="container">
@@ -628,7 +570,6 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-
           <div class="socials-a">
             <ul class="list-inline">
               <li class="list-inline-item">
@@ -665,7 +606,6 @@
             </p>
           </div>
           <div class="credits">
-
             Designed by <a href="https://pritambajagain.com.np/">D Czar</a>
           </div>
         </div>
@@ -673,23 +613,18 @@
     </div>
   </footer>
   <!--/ Footer End /-->
-
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
-
   <!-- JavaScript Libraries -->
   <script>
     function readURL(files) {
       if (files && files[0]) {
         var reader = new FileReader();
-
         reader.onload = function(event) {
-
           $('#blah')
             .attr('src', event.target.result);
         };
         console.log(files[0])
-
         reader.readAsDataURL(files[0]);
       }
     }
@@ -703,7 +638,6 @@
   <script src="lib/scrollreveal/scrollreveal.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
-
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script>
@@ -711,7 +645,6 @@
     document.querySelector('.btn2').style.backgroundColor = 'white';
     document.querySelector('.btn2').style.color = 'black';
     document.querySelector('.btn1').style.color = 'white';
-
     document.querySelector('.btn1').addEventListener('click', showBtn1);
 
     function showBtn1(a) {
@@ -721,7 +654,6 @@
       document.querySelector('.btn1').style.color = 'white';
       document.querySelector('#modal1').style.display = 'block';
       document.querySelector('#modal2').style.display = 'none';
-
       a.preventDefault();
     }
   </script>
@@ -738,9 +670,6 @@
       b.preventDefault();
     }
   </script>
-
-
-
 </body>
 
 </html>

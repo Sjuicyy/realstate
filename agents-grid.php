@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>EstateAgency Bootstrap Template</title>
@@ -9,26 +8,20 @@
   </a>
   <meta content="" name="keywords">
   <meta content="" name="description">
-
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
   <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
@@ -36,9 +29,7 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 </head>
-
 <body>
-
   <!-- <div class="click-closed"></div> -->
   <!--/ Nav Star /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
@@ -77,7 +68,6 @@
     </div>
   </nav>
   <!--/ Nav End /-->
-
   <!--/ Intro Single star /-->
   <section class="intro-single">
     <div class="container">
@@ -122,7 +112,7 @@
                   <div class="card-header-d">
                     <div class="card-title-d align-self-center">
                       <h3 class="title-d">
-                        <a href="profile-public.php?id=<?php echo $data['id'] ?>" class="link-two">
+                        <a href="agent-single.php?id=<?php echo $data['id'] ?>" class="link-two">
                           <?php echo $data['name']; ?>
                       </h3>
                     </div>
@@ -180,7 +170,6 @@
                 <a class="page-link" href="#">3</a>
               </li>
               <li class="page-item next">
-
                 <a class="page-link" href="#">
                   <span class="ion-ios-arrow-forward"></span>
                 </a>
@@ -190,20 +179,12 @@
         </div>
       </div>
     </div>
-
-
-
-
     <!--/ Agents Grid End /-->
-
-
     <!-- Agent list start -->
-
     <div class="table-responsive  text-nowrap container" id="list">
       <!-- information table start  -->
       <div>
         <table class="table">
-
           <thead>
             <tr>
               <th>ID</th>
@@ -239,7 +220,7 @@
                 <?php echo $data['date'] ?>
               </td>
               <td>
-                <a href="profile-public.php?id=<?php echo $data['id'] ?>">
+                <a href="agent-single.php?id=<?php echo $data['id'] ?>">
                   <div class="btn-sm btn-success text-center" style="width: 100px;">View</div>
                 </a>
                 <div class="btn-sm btn-success text-center mt-1" style="width: 100px;">Contact</div>
@@ -250,11 +231,9 @@
             }
         ?>
           </tbody>
-
         </table>
         <hr>
       </div>
-
     </div>
   </section>
   <!--/ footer Star /-->
@@ -420,10 +399,8 @@
     </div>
   </footer>
   <!--/ Footer End /-->
-
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
-
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -434,32 +411,24 @@
   <script src="lib/scrollreveal/scrollreveal.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
-
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
-
   <script>
     document.querySelector('.btn2').style.backgroundColor = 'white';
     document.querySelector('.btn2').style.color = 'black';
     document.querySelector('#list').style.display = 'none';
-
-
     document.querySelector('.btn1').addEventListener('click', showBtn1);
-
     function showBtn1(a) {
       document.querySelector('.btn2').style.backgroundColor = 'white';
       document.querySelector('.btn2').style.color = 'black';
       document.querySelector('.btn1').style.backgroundColor = '#28A746';
       document.querySelector('#grid').style.display = 'block';
       document.querySelector('#list').style.display = 'none';
-
       a.preventDefault();
     }
   </script>
   <script>
     document.querySelector('.btn2').addEventListener('click', showBtn2);
-
     function showBtn2(b) {
       document.querySelector('.btn2').style.width = '';
       document.querySelector('.btn1').style.backgroundColor = 'white';
@@ -470,7 +439,5 @@
       b.preventDefault();
     }
   </script>
-
 </body>
-
 </html>

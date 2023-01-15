@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Fiona Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
@@ -36,10 +29,8 @@
 </head>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
-
 <body>
     <!-- / Form Search End /-->
-
     <!--/ Nav Star /-->
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
         <div class="container">
@@ -71,9 +62,9 @@
                     </li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+            <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
                 <span class="fa fa-user-plus" aria-hidden="true"></span>
-            </button>
+            </button> -->
         </div>
     </nav>
     <!--/ Nav End /-->
@@ -147,7 +138,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -156,7 +146,6 @@
             }
 ?>
     </div>
-
     <div class="container">
         <div class="col-md-12 section-t8">
             <div class="title-box-d">
@@ -164,7 +153,7 @@
             </div>
         </div>
         <div class="row property-grid grid">
-            <div class="col-sm-12">
+            <!-- <div class="col-sm-12">
                 <div class="grid-option">
                     <form>
                         <select class="custom-select">
@@ -175,9 +164,7 @@
                         </select>
                     </form>
                 </div>
-            </div>
-            
-            
+            </div> -->
             <?php
             $sql = "SELECT * FROM property WHERE agent_id='$id' ";
             $result = $conn->query($sql);
@@ -230,19 +217,14 @@
                     </div>
                 </div>
             </div>
-
             <?php
                 }
             }
 ?>
-
         </div>
     </div>
     </section><!-- End Agent Single -->
-
     <!-- End Agent Single -->
-
-
     <!--/ footer Star /-->
     <section class="section-footer">
         <div class="container">
@@ -329,7 +311,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
                     <div class="socials-a">
                         <ul class="list-inline">
                             <li class="list-inline-item">
@@ -366,7 +347,6 @@
                         </p>
                     </div>
                     <div class="credits">
-
                         Designed by <a href="https://pritambajagain.com.np/">D Czar</a>
                     </div>
                 </div>
@@ -374,21 +354,17 @@
         </div>
     </footer>
     <!--/ Footer End /-->
-
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
-
     <!-- JavaScript Libraries -->
     <script>
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-
                 reader.onload = function(e) {
                     $('#blah')
                         .attr('src', e.target.result);
                 };
-
                 reader.readAsDataURL(input.files[0]);
             }
         }
@@ -402,10 +378,7 @@
     <script src="lib/scrollreveal/scrollreveal.min.js"></script>
     <!-- Contact Form JavaScript File -->
     <script src="contactform/contactform.js"></script>
-
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
-
 </body>
-
 </html>

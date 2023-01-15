@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!($_SESSION['status'] == 'logedin')) {
+    header('Location:index1.php');
+}
+$login_id = $_SESSION['id']
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,8 +43,7 @@
   ======================================================= -->
 </head>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
-    nonce="0jwGYLXn"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
 
 <body>
     <!-- / Form Search End /-->
@@ -44,15 +51,13 @@
     <!--/ Nav Star /-->
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
         <div class="container">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
-            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none"
-                data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
                 <span class="fa fa-user-plus" aria-hidden="true"></span>
             </button>
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
@@ -74,8 +79,7 @@
                     </li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block"
-                data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
+            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
                 <span class="fa fa-user-plus" aria-hidden="true"></span>
             </button>
         </div>
@@ -85,19 +89,19 @@
     <section class="intro-single">
         <div class="container">
             <div class="row">
-            <?php
-            require_once 'Connection.php';
-            $sql = "SELECT * FROM agent WHERE id='1' ";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($data = mysqli_fetch_array($result)) {
-            ?>
-                <div class="col-md-12 col-lg-8">
-                    <div class="title-single-box">
-                        <h1 class="title-single"><?php echo $data['name']; ?></h1>
-                        <span class="color-text-a">Agent </span>
-                    </div>
-                </div>
+                <?php
+                require_once 'Connection.php';
+                $sql = "SELECT * FROM agent WHERE id='$login_id' ";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($data = mysqli_fetch_array($result)) {
+                ?>
+                        <div class="col-md-12 col-lg-8">
+                            <div class="title-single-box">
+                                <h1 class="title-single"><?php echo $data['name']; ?></h1>
+                                <span class="color-text-a">Agent </span>
+                            </div>
+                        </div>
 
             </div>
         </div>
@@ -126,7 +130,7 @@
                                 </div>
                                 <div class="agent-content mb-3">
                                     <p class="content-d color-text-a">
-                                    <?php echo $data['about']; ?>
+                                        <?php echo $data['about']; ?>
                                     </p>
                                     <div class="info-agents color-a">
                                         <p>
@@ -139,7 +143,7 @@
                                         </p>
                                         <p>
                                             <strong>Facebook: </strong>
-                                            
+
                                             <a>
                                                 <a href="<?php echo $data['facebook']; ?>" class="color-text-a"> facebook@ <?php echo $data['name']; ?></a>
                                             </a>
@@ -150,13 +154,13 @@
 
                                     <div class="socials-a">
                                         <ul class="list-inline">
-                                           
+
                                             <li class="list-inline-item mx-5">
                                                 <a href="<?php echo $data['facebook']; ?>">
-                                                    <i class=" fa fa-facebook" aria-hidden="true"></i>acebook
+                                                    <i class=" fa color-b fa-facebook" aria-hidden="true"></i><span class='color-b'>acebook</span>
                                                 </a>
                                             </li>
-                                           
+
                                         </ul>
                                     </div>
                                 </div>
@@ -222,10 +226,8 @@
                                             </p>
                                             <p>
                                                 <strong>Password: </strong>
-                                                <input class=" form form-control" type="text"
-                                                    placeholder="Enter new password">
-                                                <input class=" form form-control mt-1" type="text"
-                                                    placeholder="Re-enter password">
+                                                <input class=" form form-control" type="text" placeholder="Enter new password">
+                                                <input class=" form form-control mt-1" type="text" placeholder="Re-enter password">
                                             </p>
                                         </div>
                                     </div>
@@ -247,12 +249,11 @@
                     </div>
 
                 </div>
-
             </div>
-            <?php
+    <?php
+                    }
                 }
-            }
-            ?>
+    ?>
     </section>
     <!-- =======Editable Agent Section end ======== -->
 
@@ -327,12 +328,8 @@
                             <h3 class="w-title-a text-brand">Facebook</h3>
                         </div>
                         <div class="w-body-a">
-                            <div class="fb-page" data-href="https://www.facebook.com/floraservices2070"
-                                data-tabs="timeline" data-width="" data-height="110" data-small-header="false"
-                                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-                                <blockquote cite="https://www.facebook.com/floraservices2070"
-                                    class="fb-xfbml-parse-ignore"><a
-                                        href="https://www.facebook.com/floraservices2070">Flora
+                            <div class="fb-page" data-href="https://www.facebook.com/floraservices2070" data-tabs="timeline" data-width="" data-height="110" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                                <blockquote cite="https://www.facebook.com/floraservices2070" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/floraservices2070">Flora
                                         Services</a>
                                 </blockquote>
                             </div>
@@ -407,7 +404,7 @@
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     $('#blah')
                         .attr('src', e.target.result);
                 };

@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>EstateAgency Bootstrap Template</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link rel="stylesheet" <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-
-
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   <style>
-
   </style>
   <!-- =======================================================
     Theme Name: EstateAgency
@@ -38,12 +30,7 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 </head>
-
 <body>
-
-
-
-
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
   <div class="box-collapse">
@@ -137,7 +124,6 @@
     </div>
   </div>
   <!--/ Form Search End /-->
-
   <!--/ Nav Start /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
@@ -167,16 +153,11 @@
         </ul>
       </div>
       <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
-        <span class="fa fa-user-plus" aria-hidden="true"></span>
+        <span class="fa fa-search" aria-hidden="true"></span>
       </button>
     </div>
   </nav>
-
   <!-- ===== nav end ====== -->
-
-
-
-
   <!--/ Intro Single star /-->
   <section class="intro-single">
     <div class="container">
@@ -191,8 +172,6 @@
     </div>
   </section>
   <!--/ Intro Single End /-->
-
-
   <section class="property-grid grid">
     <div class="container">
       <div class="row">
@@ -202,13 +181,8 @@
         </div>
       </div>
     </div>
-
     <!--/ Property Grid Start /-->
-
-
-
     <div class="container" id="grid">
-
       <div class="row" id="111">
     <?php        
         require_once 'Connection.php';
@@ -277,12 +251,6 @@
         }
         ?>
       </div>
-
-
-
-
-
-
       <div class="row">
         <div class="col-sm-12">
           <nav class="pagination-a">
@@ -312,9 +280,6 @@
       </div>
     </div>
     <!--/ Property Grid End /-->
-
-
-
     <!-- Property list view start -->
     <div class="table-responsive text-nowrap container" id="list">
       <!-- information table start  -->
@@ -343,7 +308,6 @@
               <td>
                 <?php echo $data["id"]; ?>
               </td>
-
               <td>
                 <img src="img/house/<?php echo $data['image']; ?>" style="height:80px;width:100px;" alt="" class="img-d img-fluid">
               </td>
@@ -356,8 +320,6 @@
               <td>
                 <?php echo $data["price"]; ?>
               </td>
-
-            
               <td>
                 <a href="property-single.php?id=<?php echo $data["id"]; ?>">
                   <div class="btn-sm btn-success text-center" style="width: 80px;">View</div>
@@ -373,25 +335,9 @@
         </table>
         <hr>
       </div>
-
     </div>
   </section>
-
   <!-- Property list view end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!--/ footer Star /-->
   <section class="section-footer">
     <div class="container">
@@ -555,10 +501,8 @@
     </div>
   </footer>
   <!--/ Footer End /-->
-
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
-
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -569,30 +513,24 @@
   <script src="lib/scrollreveal/scrollreveal.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
-
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script>
     document.querySelector('.btn2').style.backgroundColor = 'white';
     document.querySelector('.btn2').style.color = 'black';
     document.querySelector('#list').style.display = 'none';
-
-
     document.querySelector('.btn1').addEventListener('click', showBtn1);
-
     function showBtn1(a) {
       document.querySelector('.btn2').style.backgroundColor = 'white';
       document.querySelector('.btn2').style.color = 'black';
       document.querySelector('.btn1').style.backgroundColor = '#28A746';
       document.querySelector('#grid').style.display = 'block';
       document.querySelector('#list').style.display = 'none';
-
       a.preventDefault();
     }
   </script>
   <script>
     document.querySelector('.btn2').addEventListener('click', showBtn2);
-
     function showBtn2(b) {
       document.querySelector('.btn2').style.width = '';
       document.querySelector('.btn1').style.backgroundColor = 'white';
@@ -603,7 +541,5 @@
       b.preventDefault();
     }
   </script>
-
 </body>
-
 </html>
