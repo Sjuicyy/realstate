@@ -25,17 +25,9 @@ if (isset($_POST['submit'])) {
     // $I=$_FILES['Photo']['name'];
     // $target2 = "../assets/img/agent/".basename($I);
     // $J = $_POST['Date'];
-
-    
-
     $sql="INSERT INTO `property` (`id`, `agent_id`, `name`, `address`, `area`, `price`, `type`, `valid_time`, `beds`, `baths`, `description`, `other_facilities`, `image`, `video`, `floor_plan`, `status`, `report`, `date`) 
                                     VALUES (NULL,'$id', '$name', '$address', '$area', '$price', '$type', '$valid', '$beds', '$baths', '$description', NULL, '$image', NULL, NULL, '$status', NULL, '$date')";
     mysqli_query($conn,$sql);
-
-
-
-
-
     // if  (move_uploaded_file($_FILES['Photo']['tmp_name'], $target2)) {
     //     echo"<script>alert('New Agent Added !');</script>";
         header("Location:AAindex.php");
