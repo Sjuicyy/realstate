@@ -69,14 +69,14 @@ $login_id = $_SESSION['id']
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
+            <a class="navbar-brand text-brand" href="AAindex.php">Fiona<span class="color-b"> Services</span></a>
             <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
                 <span class="fa fa-user-plus" aria-hidden="true"></span>
             </button>
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Home</a>
+                        <a class="nav-link active" href="">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="AAdd-property.php">Add Property</a>
@@ -104,7 +104,9 @@ $login_id = $_SESSION['id']
                             <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
                             <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
                             <p><?php echo $data['email'] ?></p>
-                            <button class="btn btn-b w-100 rounded-4">Log out</button>
+                            <a href="index.php">
+                                <button class="btn btn-b w-100 rounded-4">Log out</button>
+                            </a>
                         </div>
                 <?php
                     }

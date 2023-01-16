@@ -1,11 +1,11 @@
 <?php
 if (isset($_POST['submit'])) {
-    $name= $_POST['name'];
-    $address= $_POST['address'];
+    $name= ucwords($_POST['name']);
+    $address= ucwords($_POST['address']);
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $pswd = $_POST['password'];
-    $about = $_POST['about'];
+    $about = ucfirst($_POST['about']);
     $date=date("Y-m-d");
     $image='profile11.jpg';
     // $I = $_FILES['photo']['name'];
@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
   mysqli_query($conn,$sql);
     // if (move_uploaded_file($_FILES['photo']['tmp_name'], $target2))  {
     //     echo "<script>alert('Successfully Submitted !');</script>";
-          header('Location: form.php');
+          header('Location: index.php');
     // } else {
     //     echo "<script>alert('Something went wrong! Please Retry');</script>";
     //       echo"<script>window.location='form.php'</script>";

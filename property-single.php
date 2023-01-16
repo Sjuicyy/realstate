@@ -193,15 +193,14 @@
           <div class="row">
             <div class="col-sm-12">
               <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
-                <div class="carousel-item-b" style="width:100%;height:150px;">
-                  <img src="img/house/<?php echo $data["image"]; ?>" width="360px" height="450px" alt="" class="img-d img-fluid">
-                  <!-- <img src="img/house/<?php echo $data['image']; ?>" alt="" class="img-a img-fluid"> -->
+                <div class="carousel-item-b" >
+                  <img src="img/house/<?php echo $data["image"]; ?>" width="360px" height="950px"  style="object-fit: fill;">
                 </div>
                 <div class="carousel-item-b">
-                  <img src="img/slide-3.jpg" alt="" width="360px" height="450px">
+                  <img src="img/house/<?php echo $data["image"]; ?>" width="360px" height="950px" style="object-fit: fill;">
                 </div>
                 <div class="carousel-item-b">
-                  <img src="img/slide-1.jpg" alt="" width="360px" height="450px">
+                  <img src="img/house/<?php echo $data["image"]; ?>" width="360px" height="950px" style="object-fit: fill;">
                 </div>
               </div>
               <div class="row justify-content-between">

@@ -30,22 +30,22 @@ $login_id = $_SESSION['id']
   <link href="css/style.css" rel="stylesheet">
   <style>
     .logout {
-        display: none;
-        color: rgb(255, 255, 255);
-        position: absolute;
-        margin-left: -200px;
-        margin-top: 40px;
-        background-color: #2eca6ad5;
-        padding: 5px;
-        border: 2px solid #2ECA69;
-        border-radius: 6px;
-        width: 300px;
+      display: none;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      margin-left: -200px;
+      margin-top: 40px;
+      background-color: #2eca6ad5;
+      padding: 5px;
+      border: 2px solid #2ECA69;
+      border-radius: 6px;
+      width: 300px;
     }
 
     .icon:hover .logout {
-        display: block;
+      display: block;
     }
-</style>
+  </style>
   <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
@@ -77,14 +77,14 @@ $login_id = $_SESSION['id']
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.php">Fiona<span class="color-b"> Services</span></a>
+      <a class="navbar-brand text-brand" href="AAindex.php">Fiona<span class="color-b"> Services</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button>
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link active" href="AAindex.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="AAdd-property.php">Add Property</a>
@@ -98,34 +98,36 @@ $login_id = $_SESSION['id']
         </ul>
       </div>
       <div class="icon">
-                <?php
-                require_once 'Connection.php';
-                $sql = "SELECT * FROM agent where id=$login_id";
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    while ($data = mysqli_fetch_array($result)) {
-                ?>
-                        <a href="./AAprofile.php?id=<?php echo $login_id ?>">
-                            <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
-                        </a>
-                        <div class="logout text-center">
-                            <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
-                            <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
-                            <p><?php echo $data['email'] ?></p>
-                            <button class="btn btn-b w-100 rounded-4">Log out</button>
-                        </div>
-                <?php
-                    }
-                }
-                ?>
+        <?php
+        require_once 'Connection.php';
+        $sql = "SELECT * FROM agent where id=$login_id";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          while ($data = mysqli_fetch_array($result)) {
+        ?>
+            <a href="./AAprofile.php?id=<?php echo $login_id ?>">
+              <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle  float-right" style="width:40px ;height:40px;border-radius:50px">
+            </a>
+            <div class="logout text-center">
+              <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
+              <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
+              <p><?php echo $data['email'] ?></p>
+              <a href="index.php">
+                <button class="btn btn-b w-100 rounded-4">Log out</button>
+              </a>
             </div>
+        <?php
+          }
+        }
+        ?>
+      </div>
       <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false" title="Agent Space">
         <span class="fa fa-user-plus" aria-hidden="true"></span>
       </button> -->
     </div>
   </nav>
   <!--/ Nav End /-->
-  
+
   <!--/ Footer End /-->
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
