@@ -158,14 +158,14 @@ $login_id = $_SESSION['id']
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input" style="accent-color: green;" type="radio" name="1" id="11" checked value="1">
-                                                <label class="form-check-label" for="11">
+                                                <input class="form-check-input" style="accent-color: green;" type="radio" name="<?php echo $data['id'] ?>" id="<?php echo $data['id'] ?>" checked value="1">
+                                                <label class="form-check-label" for="<?php echo $data['id'] ?>">
                                                     Available
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" style="accent-color: red;" type="radio" name="1" id="12" value="0">
-                                                <label class="form-check-label" for="12">
+                                                <input class="form-check-input" style="accent-color: red;" type="radio" name="<?php echo $data['id'] ?>" id="1<?php echo $data['id'] ?>" value="0">
+                                                <label class="form-check-label" for="1<?php echo $data['id'] ?>">
                                                     sold
                                                 </label>
                                             </div>
