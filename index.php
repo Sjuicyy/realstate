@@ -96,7 +96,7 @@
       <!-- login modal end -->
       <!-- signup modal start -->
       <div id="modal2">
-        <form class="form-a" action="agentsave.php" method="POST" enctype="multipart/form-data">
+        <form class="form-a" action="addagent.php" method="POST" enctype="multipart/form-data">
           <div class="row">
             <div class="col-md-12 mb-2">
               SignUp here: <br><br>
@@ -219,7 +219,7 @@
   <!--/ Carousel Start /-->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/widePic/wide2.jpg)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/widePic/wide1.jpg)">
         <div class="intro-content display-table">
           <div class="table-cell">
             <div class="container">
