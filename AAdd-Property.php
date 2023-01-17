@@ -220,7 +220,7 @@ $login_id = $_SESSION['id']
         </div>
         <div class="col mb-2">
           <div class="form-group">
-            <input id="files" class="form-control form-control-a" type="file" accept="image/*" multiple hidden>
+            <input id="files" class="form-control form-control-a" type="file" accept="image/*" name="image" multiple hidden>
             <label for="files" class="files form-control-lg" style="background-color: #2ECA69;color:aliceblue">+ Add Photos</label>
             <div id="preview"></div>
           </div>

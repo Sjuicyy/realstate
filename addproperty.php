@@ -1,9 +1,4 @@
-<!-- 
-session_start();
-if (!($_SESSION['status'] == 'logedin')) {
-  header('Location:index1.php');
-}
-$login_id = $_SESSION['id'] -->
+
 
 <?php
 if (isset($_POST['submit'])) {
@@ -22,8 +17,8 @@ if (isset($_POST['submit'])) {
     $image='sale11.jpg';
     $status='available';
     $date=date("Y-m-d");
-    $I=$_FILES['Photo']['name'];
-    $target2 = "img/Agent".basename($I);
+    $image=$_FILES['image']['name'];
+    $target2 = "img/house/".basename($image);
     $sql="INSERT INTO `property` (`id`, `agent_id`, `name`, `address`, `area`, `price`, `type`, `valid_time`, `beds`, `baths`, `description`, `other_facilities`, `image`, `video`, `floor_plan`, `status`, `report`, `date`) 
                                     VALUES (NULL,'$id', '$name', '$address', '$area', '$price', '$type', '$valid', '$beds', '$baths', '$description', NULL, '$image', NULL, NULL, '$status', NULL, '$date')";
     mysqli_query($conn,$sql);
