@@ -104,7 +104,7 @@ $login_id = $_SESSION['id']
                             <img src="img/Agent/<?php echo $data['image'] ?>" alt="" class="img-sm rounded-circle" style="width:100px ;height:100px;border-radius:50px">
                             <p class="mt-4 h4"> <?php echo $data['name'] ?></p>
                             <p><?php echo $data['email'] ?></p>
-                            <a href="index.php">
+                            <a href="end.php">
                                 <button class="btn btn-b w-100 rounded-4">Log out</button>
                             </a>
                         </div>
