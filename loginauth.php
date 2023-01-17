@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_num_rows($data);
     $result0 = mysqli_fetch_array($data);
     $login_id1 = $result0['id'];
-
     if ($result == 1) {
         session_start();
         $_SESSION['User'] = $_POST['email'];

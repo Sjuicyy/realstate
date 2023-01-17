@@ -5,12 +5,8 @@ if (!($_SESSION['status'] == 'logedin')) {
 }
 $login_id = $_SESSION['id']
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Home</title>
@@ -53,12 +49,10 @@ $login_id = $_SESSION['id']
         border-radius: 6px;
         width: 300px;
     }
-
     .icon:hover .logout {
         display: block;
     }
 </style>
-
 <body>
     <!-- / Form Search End /-->
     <!--/ Nav Star /-->
@@ -341,5 +335,4 @@ $login_id = $_SESSION['id']
             <!-- Template Main Javascript File -->
             <script src="js/main.js"></script>
 </body>
-
 </html>

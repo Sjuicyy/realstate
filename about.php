@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>About</title>
@@ -28,7 +27,6 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 </head>
-
 <body>
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
@@ -178,7 +176,6 @@
   </section>
   <!--/ Intro Single End /-->
   <!--/ About Star /-->
-
     <section class="section-about mt-5">
       <div class="container">
         <div class="row">
@@ -483,5 +480,4 @@
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -13,5 +13,4 @@ header("Location:AAprofile.php");
     //     echo"<script>alert('Something went wrong! Please Retry');</script>";
     //     echo"<script>window.location='agent.php?Type=$A'</script>";
     // }
-
 // }

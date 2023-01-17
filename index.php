@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Fiona Services</title>
@@ -34,7 +33,6 @@
       border-radius: 6px;
       width: 300px;
     }
-
     .icon:hover .logout {
       display: block;
     }
@@ -48,7 +46,6 @@
 </head>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
-
 <body>
   <?
   require_once 'Connection.php';
@@ -646,7 +643,6 @@
     document.querySelector('.btn2').style.color = 'black';
     document.querySelector('.btn1').style.color = 'white';
     document.querySelector('.btn1').addEventListener('click', showBtn1);
-
     function showBtn1(a) {
       document.querySelector('.btn2').style.backgroundColor = 'white';
       document.querySelector('.btn2').style.color = 'black';
@@ -659,7 +655,6 @@
   </script>
   <script>
     document.querySelector('.btn2').addEventListener('click', showBtn2);
-
     function showBtn2(b) {
       document.querySelector('.btn1').style.backgroundColor = 'white';
       document.querySelector('.btn1').style.color = 'black';
@@ -671,5 +666,4 @@
     }
   </script>
 </body>
-
 </html>

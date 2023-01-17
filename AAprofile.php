@@ -5,33 +5,26 @@ if (!($_SESSION['status'] == 'logedin')) {
 }
 $login_id = $_SESSION['id']
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Profile</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
     <style>
@@ -47,12 +40,10 @@ $login_id = $_SESSION['id']
             border-radius: 6px;
             width: 300px;
         }
-
         .icon:hover .logout {
             display: block;
         }
     </style>
-
     <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
@@ -62,10 +53,8 @@ $login_id = $_SESSION['id']
 </head>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="0jwGYLXn"></script>
-
 <body>
     <!-- / Form Search End /-->
-
     <!--/ Nav Star /-->
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
         <div class="container">
@@ -141,13 +130,9 @@ $login_id = $_SESSION['id']
                                 <span class="color-text-a">Agent </span>
                             </div>
                         </div>
-
             </div>
         </div>
     </section><!-- End Intro Single -->
-
-
-
     <!-- ======= Agent Single ======= -->
     <section class="agent-single" id="view">
         <div class="container">
@@ -182,7 +167,6 @@ $login_id = $_SESSION['id']
                                         </p>
                                         <p>
                                             <strong>Facebook: </strong>
-
                                             <a>
                                                 <a href="<?php echo $data['facebook']; ?>" class="color-text-a"> facebook@ <?php echo $data['name']; ?></a>
                                             </a>
@@ -190,16 +174,13 @@ $login_id = $_SESSION['id']
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-
                                     <div class="socials-a">
                                         <ul class="list-inline">
-
                                             <li class="list-inline-item mx-5">
                                                 <a href="<?php echo $data['facebook']; ?>">
                                                     <i class=" fa color-b fa-facebook" aria-hidden="true"></i><span class='color-b'>acebook</span>
                                                 </a>
                                             </li>
-
                                         </ul>
                                     </div>
                                 </div>
@@ -212,18 +193,10 @@ $login_id = $_SESSION['id']
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
     <!---  ===== End Agent Single ======== -->
-
-
-
-
     <!-- =======Editable Agent Section start ======== -->
     <section class="agent-single" id="edit">
         <div class="container">
@@ -245,7 +218,6 @@ $login_id = $_SESSION['id']
                                         </div>
                                     </div>
                                     <form action='agentedit.php' method='POST' class="agent-content mb-3">
-
                                         <div class="info-agents color-a">
                                             <p>
                                                 <strong>Mobile: </strong>
@@ -288,9 +260,7 @@ $login_id = $_SESSION['id']
 ?>
     </section>
     <!-- =======Editable Agent Section end ======== -->
-
  
-
   
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -301,25 +271,17 @@ $login_id = $_SESSION['id']
     <script src="lib/scrollreveal/scrollreveal.min.js"></script>
     <!-- Contact Form JavaScript File -->
     <script src="contactform/contactform.js"></script>
-
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
-
     <script>
         document.querySelector('#view').style.display = 'block';
         document.querySelector('#edit').style.display = 'none';
-
         document.querySelector('#btn1').addEventListener('click', showBtn1);
-
         function showBtn1(a) {
             document.querySelector('#view').style.display = 'none';
             document.querySelector('#edit').style.display = 'block';
-
-
             a.preventDefault();
         }
     </script>
-
 </body>
-
 </html>

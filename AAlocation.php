@@ -7,7 +7,6 @@ $login_id = $_SESSION['id']
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Add Location</title>
@@ -41,7 +40,6 @@ $login_id = $_SESSION['id']
       border-radius: 6px;
       width: 300px;
     }
-
     .icon:hover .logout {
       display: block;
     }
@@ -60,13 +58,11 @@ $login_id = $_SESSION['id']
   #preview img {
     max-height: 100px;
   }
-
   .files {
     background-color: #2ECA69;
     color: antiquewhite;
   }
 </style>
-
 <body>
   <!-- / Form Search End /-->
   <!--/ Nav Star /-->
@@ -127,7 +123,6 @@ $login_id = $_SESSION['id']
     </div>
   </nav>
   <!--/ Nav End /-->
-
   <!--/ Footer End /-->
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
@@ -172,5 +167,4 @@ $login_id = $_SESSION['id']
     });
   </script>
 </body>
-
 </html>
