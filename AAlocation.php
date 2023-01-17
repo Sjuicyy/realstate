@@ -10,7 +10,7 @@ $login_id = $_SESSION['id']
 
 <head>
   <meta charset="utf-8">
-  <title>Fiona Services</title>
+  <title>Add Location</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -84,13 +84,13 @@ $login_id = $_SESSION['id']
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="AAindex.php">Home</a>
+            <a class="nav-link " href="AAindex.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="AAdd-property.php">Add Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="AAlocation.php">Location</a>
+            <a class="nav-link active" href="AAlocation.php">Location</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="AAtestimonial.php">Testimonial</a>

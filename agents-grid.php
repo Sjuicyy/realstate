@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>EstateAgency Bootstrap Template</title>
+  <title>All Agents</title>
   <a href="profile.php">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   </a>
@@ -46,13 +46,13 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link " href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="property-grid.php">Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="agents-grid.php">Agents</a>
+            <a class="nav-link active" href="agents-grid.php">Agents</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.php">About Us</a>
