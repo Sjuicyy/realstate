@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION['status'] == 'logedin')) {
-  header('Location:index1.php');
+  header('Location:index.php');
 }
 $login_id = $_SESSION['id']
 ?>
